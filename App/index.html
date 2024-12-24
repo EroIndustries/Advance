@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance</title>
+</head>
+<script src="../Test/Build.js"></script>
+<body>
+</body>
+<script>
+localStorage.setItem("NAME","01");localStorage.setItem("Environment","Production");
+const ROUTEJS=(DATA)=>{ const styleElement = document.createElement("script"); styleElement.textContent = DATA; document.head.appendChild(styleElement);};
+ROUTEJS(localStorage.getItem('ADVANCE'));  
+if (localStorage.getItem('Module')) {
+    AUTORUN(); 
+} else {
+    import('../Start/Start.js')
+    .then(module =>
+        {
+            if (typeof module.APPLOAD === 'function') {
+                module.APPLOAD();
+            } else {
+                console.error('APPLOAD is not defined in the module');
+            }
+        }
+    )
+    .catch(error =>
+        {
+            console.error('Error loading the module:', error);
+        }
+    ); 
+};
+</script>
+</html>
