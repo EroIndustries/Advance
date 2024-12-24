@@ -1,4 +1,7 @@
 const LINKS=`
+const PROCESSCONNECTION='https://script.google.com/macros/s/AKfycbzLmZe07TqnPzhppMMgd6EdkvAl3f_mj_sh9RMqDqSPvxnRTqH_4yE31ZYuotCKcHnq/exec';
+const REQUESTCONNECTION='https://script.google.com/macros/s/AKfycbxNdYSJn1P-BqHzBQ00UWYv8K-FZIkaRHBXSRR-sfBUFryfawtvAA4IwRtJgZm_gty1/exec';
+const TOKENCONNECTION='https://script.google.com/macros/s/AKfycbxkGgol95WSc9YQIqXrQYRFbYQfaN3KM_jG83vjwWRcqZJl1CKVh2gQ3FAuyeX7Jzre3Q/exec';
 const UPDATEDATABASECONNECTION='https://script.google.com/macros/s/AKfycbzbmRB2zfDyMcde9mSmgC8u6U6a805g-LWGj9zRf7CZwrGp8eWwOPZanZ4htoNjEStGlQ/exec';
 const GETDATABASECONNECTION='https://script.google.com/macros/s/AKfycby5S_I3_hu6iEB0n8I7cmFZ9liA1kGPpQ-9ewmTcJmkUuMCYY540oaGDwJGE4ADs6tv5w/exec';
 const INSERTDATABASECONNECTION='https://script.google.com/macros/s/AKfycbyfMnGzbYAbyK5TzUZ2Og9IH8QDlG81yUydnWQ5fCLzJYHj9Y36KvpaeYZoLYjQ5iDsUQ/exec';
