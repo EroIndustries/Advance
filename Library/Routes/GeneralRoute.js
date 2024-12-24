@@ -3,6 +3,7 @@ import { MODULE } from "../Module/Module.js";
 import { ASSETSROUTE } from "./AssetsRoute.js";
 import { COMPONENTSROUTE } from "./ComponentsRouter.js";
 import { FUNCTIONSROUTE } from "./FunctionsRoute.js"
+import { MODULED } from "./ModuleRoute.js";
 const GENERALROUTE=()=>{
 
     APIS();
@@ -14,6 +15,8 @@ const GENERALROUTE=()=>{
     COMPONENTSROUTE();
 
     ASSETSROUTE();
+
+    MODULED();
 
 };
 export{GENERALROUTE};
