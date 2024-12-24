@@ -1,16 +1,21 @@
+import { FLATBUTTON } from "../Components/Button/FlatButton.js";
+import { SCROLLVIEW } from "../Components/Divs/ScrollDiv.js";
+import { VIEW } from "../Components/Divs/ViewDiv.js";
 import { FLATFOOTER } from "../Components/Footer/FlatFooter.js";
 import { FLATHEADER } from "../Components/Header/FlatHeader.js";
 import { ICONED } from "../Components/Icon/FlatIcon.js";
-
+import { INPUT } from "../Components/Input/Input.js";
+import { TEXTAREA } from "../Components/TextArea/TextArea.js";
 const COMPONENTSROUTE=()=>{
-
-const FUNCTIONS=`const FLATHEADER=${FLATHEADER.toString()};
-const FLATFOOTER=${FLATFOOTER.toString()};   
+const FUNCTIONS=`const HEADER=${FLATHEADER.toString()};
+const FOOTER=${FLATFOOTER.toString()};   
 const ICON=${ICONED.toString()};   
-   
+const BUTTON=${FLATBUTTON.toString()};  
+const SCROLLVIEW=${SCROLLVIEW.toString()}; 
+const VIEW=${VIEW.toString()}; 
+const INPUT=${INPUT.toString()};  
+const TEXTAREA=${TEXTAREA.toString()};  
 `;
 localStorage.setItem("COMPONENTS",FUNCTIONS);
-
-}
-
-export{COMPONENTSROUTE}
+};
+export{COMPONENTSROUTE};

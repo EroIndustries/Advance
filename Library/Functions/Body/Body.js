@@ -7,5 +7,6 @@ const BODY=()=>{
     MYELEMENT.style.height='100%';
     MYELEMENT.style.overflow='hidden';
     MYELEMENT.style.display='block';
+    MYELEMENT.style.textDecoration='none';
 };
 export{BODY};

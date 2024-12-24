@@ -1,32 +1,20 @@
 const AUTORUN=()=>{
 
-    APPMODE('');
+    APPMODE('#000000');
 
-    FLATHEADER('',(ELEMENT)=>{
+    INPUT('','email','Enter Email','',(data)=>{
 
-        ICON(ELEMENT,WHITEAPPICON,(ELES)=>{
-
-            EVENT(ELES,'click',()=>{
-
-                STYLED(ELEMENT,'background','orange');
-
-            });
-
-        });
+    });
+  
+    INPUT('','password','Enter Password','',(data)=>{
 
     });
 
-    FLATFOOTER('',(ELEMENT)=>{
+    TEXTAREA('','Enter About You','',()=>{
 
-        ICON(ELEMENT,WHITEAPPICON,(ELES)=>{
+    })
 
-            EVENT(ELES,'click',()=>{
-
-                STYLED(ELEMENT,'background','orange');
-
-            });
-
-        });
+    BUTTON('','Login','',()=>{
 
     });
 
