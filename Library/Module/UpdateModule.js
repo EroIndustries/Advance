@@ -9,7 +9,7 @@ const APPUPDATER=()=>{
                     module.APPLOAD();
                 } else {
                     console.error('APPLOAD is not defined in the module');
-                }
+                };
             }
         )
         .catch(error =>
@@ -36,8 +36,8 @@ const APPUPDATER=()=>{
             }
         ); 
         
-    }
+    };
 
-}
+};
 
 export{APPUPDATER}
