@@ -16,6 +16,7 @@ const INPUT=(ELEMENT,TYPE,MESSAGE,COLOR,callback)=>{
     MYELEMENT.maxLength=49000;
     MYELEMENT.autocomplete="off";
     MYELEMENT.style.color=COLOR||'#ffffff';
+    MYELEMENT.style.borderRadius='5px';
     if (ELEMENT) {
         ELEMENT.append(MYELEMENT);
     } else {
