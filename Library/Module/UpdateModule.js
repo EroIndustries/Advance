@@ -15,7 +15,10 @@ const APPUPDATER=()=>{
                 console.error('Error loading the module:', error);
             }
         ); 
-    } else {
+        return;
+    } 
+    if (localStorage.getItem("Environment" === 'Test'||'Production'||'Web' )) {
+
         import('https://eroindustries.github.io/Advance/Start/Start.js')
         .then(module =>
             {
@@ -31,7 +34,7 @@ const APPUPDATER=()=>{
                 console.error('Error loading the module:', error);
             }
         );  
+        return;
     };
 };
-
-export{APPUPDATER}
+export{APPUPDATER};
