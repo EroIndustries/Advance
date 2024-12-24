@@ -3,7 +3,7 @@ const FLATHEADER=(ELEMENT,callback)=>{
     const MYELEMENT=document.createElement('header');
 
     MYELEMENT.style.position='absolute';
-    MYELEMENT.style.background='#000';
+    MYELEMENT.style.background='#c9c6c6';
     MYELEMENT.style.height='50px';
     MYELEMENT.style.width='100%';
     MYELEMENT.style.top='0';

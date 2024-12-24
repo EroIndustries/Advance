@@ -1,6 +1,6 @@
 const AUTORUN=()=>{
 
-    APPMODE('red');
+    APPMODE('');
 
     FLATHEADER('',(ELEMENT)=>{
 
