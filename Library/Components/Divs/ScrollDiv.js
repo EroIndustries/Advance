@@ -9,7 +9,7 @@ const SCROLLVIEW=(ELEMENT,callback)=>{
     MYELEMENT.style.bottom='0';
     MYELEMENT.style.overflowY='auto';
     MYELEMENT.style.overflowX='hidden';
-    MYELEMENT.style.display='inline-flex';
+    MYELEMENT.style.display='block';
     if (ELEMENT) {
         ELEMENT.append(MYELEMENT);
     } else {
