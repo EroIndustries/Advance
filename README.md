@@ -1,3 +1,3 @@
 # The Advance Frame Work Used By E-corp Company Group to Power There Sites,Android Apps and Desktop Software.
-# With Advance You Can Link It in Your Project Not Worry About Us Node js or Server Side Technology ,It Will Automatically Download the Needed Packages and Launch thus Saving a Developer Hours of Configuration.
+# With Advance You Can Link It in Your Project Not Worry About Node js or Server Side Technology ,It Will Automatically Download the Needed Packages and Launch thus Saving a Developer Hours of Configuration.
 # Its a cloud Driven Software that will enable a users or developer to use the latest features that are bug free and its set to automatically Update incase a user is online thus downloading latest features hence reduce time for updates and errors ,all users can be on the same version of Advance regardless of the Environment and it also suppports Offline Usage for all devices or projects that use it.
