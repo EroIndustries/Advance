@@ -6,10 +6,8 @@ import { DISPLAY } from "../Functions/Display/Display.js";
 import { EVENT } from "../Functions/Event/Event.js";
 import { STORE } from "../Functions/Store/Store.js";
 import { STYLED } from "../Functions/Style/Style.js";
-import { MODULE } from "../Module/Module.js";
 import { APPUPDATER } from "../Module/UpdateModule.js";
 const FUNCTIONSROUTE=()=>{
-    MODULE();
 const FUNCTIONS=`const ADD=${ADD.toString()};
 const DISPLAY=${DISPLAY.toString()};
 const STORE=${STORE.toString()};
