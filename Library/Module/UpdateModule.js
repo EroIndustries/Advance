@@ -1,6 +1,6 @@
 const APPUPDATER=()=>{
 
-    import('https://eroindustries.github.io/Advance/Start/Start.js')
+    import('../Start/Start.js')
     .then(module =>
         {
             if (typeof module.APPLOAD === 'function') {
