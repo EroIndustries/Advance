@@ -2,5 +2,4 @@ const AUTORUN=()=>{
 
     ANDROID();
 
-   
 };
