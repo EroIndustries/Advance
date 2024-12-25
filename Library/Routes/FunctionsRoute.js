@@ -8,6 +8,7 @@ import { TEXTCOLOR } from "../Functions/Color/TextColor.js";
 import { CONDITION } from "../Functions/Condition/Condition.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
 import { EVENT } from "../Functions/Event/Event.js";
+import { RELOAD } from "../Functions/Reload/Reload.js";
 import { STORE } from "../Functions/Store/Store.js";
 import { STYLED } from "../Functions/Style/Style.js";
 import { APPUPDATER } from "../Module/UpdateModule.js";
@@ -25,6 +26,7 @@ const COLOR =${TEXTCOLOR.toString()};
 const CLEAR =${CLEAR.toString()};
 const CHECKER =${CHECKER.toString()};
 const CONDITION =${CONDITION.toString()};
+const RELOAD =${RELOAD.toString()};
 `;
 localStorage.setItem("FUNCTIONS",FUNCTIONS);
 }

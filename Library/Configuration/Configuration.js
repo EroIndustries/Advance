@@ -14,6 +14,8 @@ const APPCONFIGURATION=()=>{
             
                 console.log(element);
 
+                location.href='./index.html';
+
             };
         });
     })
