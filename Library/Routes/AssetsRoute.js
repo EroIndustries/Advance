@@ -16,4 +16,4 @@ const WHITECAMERAICON='${CAMERAICON}';
 `;
 localStorage.setItem("ICONS",FUNCTIONS);
 };
-export{ASSETSROUTE}
+export{ASSETSROUTE};

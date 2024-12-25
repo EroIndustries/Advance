@@ -6,20 +6,12 @@ import { FUNCTIONSROUTE } from "./FunctionsRoute.js"
 import { MODULED } from "./ModuleRoute.js";
 import { PAGESROUTES } from "./PagesRoute.js";
 const GENERALROUTE=()=>{
-
     APIS();
-
     MODULE();
-
     FUNCTIONSROUTE();
-
     COMPONENTSROUTE();
-
     ASSETSROUTE();
-
     MODULED();
-
     PAGESROUTES();
-
 };
 export{GENERALROUTE};

@@ -28,4 +28,4 @@ const CONDITION =${CONDITION.toString()};
 `;
 localStorage.setItem("FUNCTIONS",FUNCTIONS);
 }
-export{FUNCTIONSROUTE}
+export{FUNCTIONSROUTE};
