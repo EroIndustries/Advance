@@ -12,8 +12,8 @@ const APPCONFIGURATION=()=>{
         data.forEach(element => {
             if (element.ID === localStorage.getItem('NAME') && !element.AppCredits) {
                 console.log(element);
-                localStorage.setItem('Packed','True');
-                if (!localStorage.getItem("Packed")) {
+                if (!localStorage.getItem("Module")) {
+                    localStorage.setItem('Module','True'); 
                     location.href='./index.html'; 
                 }; 
             };
