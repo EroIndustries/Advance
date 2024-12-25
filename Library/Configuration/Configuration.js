@@ -11,16 +11,16 @@ const APPCONFIGURATION=()=>{
     .then(data =>{
         data.forEach(element => {
             if (element.ID === localStorage.getItem('NAME') && !element.AppCredits) {
-            
                 console.log(element);
-
-                location.href='./index.html';
-
+                localStorage.setItem('Packed','True');
+                if (!localStorage.getItem("Packed")) {
+                    location.href='./index.html'; 
+                }; 
             };
         });
     })
     .catch(error =>{
         console.log(error);
-    })
+    });
 };
 export{APPCONFIGURATION};
