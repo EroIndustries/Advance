@@ -1,23 +1,21 @@
-const FLATBUTTON=(ELEMENT,DATA,COLOR,COLOR2,callback)=>{
-    const MYELEMENT=document.createElement("button");
-    MYELEMENT.innerHTML=DATA;
-    MYELEMENT.style.width='98%';
-    MYELEMENT.style.height='50px';
-    MYELEMENT.style.border='none';
-    MYELEMENT.style.outline='none';
-    MYELEMENT.style.marginLeft='1%';
-    MYELEMENT.style.background=COLOR2||'#cdcdcd50';
-    MYELEMENT.style.marginTop='2%';
-    MYELEMENT.style.marginBottom='2%';
-    MYELEMENT.style.borderRadius='5px';
-    MYELEMENT.style.color=COLOR||'#ffffff';
-    if (ELEMENT) {
-        ELEMENT.append(MYELEMENT);
-    } else {
-        document.querySelector("body").append(MYELEMENT);
-    };
-    MYELEMENT.addEventListener('click',()=>{
-        callback();
+const BUTTON = (ELEMENT, ID, COLOR, WORDS, WORDCOLOR, callback) => {
+    CREATEELEMENT("button", ID, (ELEMENTS) => {
+        STYLED(ELEMENTS, "width", "98%");
+        STYLED(ELEMENTS, "height", "50px");
+        STYLED(ELEMENTS, "border-radius", "5px");
+        STYLED(ELEMENTS, "background", COLOR || "#cdcdcd50");
+        STYLED(ELEMENTS, "border", "none");
+        STYLED(ELEMENTS, "outline", "none");
+        STYLED(ELEMENTS, "color", WORDCOLOR || "white");
+        STYLED(ELEMENTS, "margin", "auto");
+        STYLED(ELEMENTS, "margin-top", "2%");
+        STYLED(ELEMENTS, "margin-bottom", "2%");
+        STYLED(ELEMENTS, "font-size", "18px");
+        DISPLAY(ELEMENTS, WORDS || "CLick Here");
+        ADD(ELEMENT, ELEMENTS);
+        EVENT(ELEMENTS, "click", () => {
+            callback();
+        });
     });
 };
-export {FLATBUTTON};
+export{BUTTON}

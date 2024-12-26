@@ -1,6 +1,8 @@
-const ADD=(HOLDER,ELEMENT,DATA)=>{
-    const MYELEMENT=document.createElement(`${ELEMENT}`);
-    MYELEMENT.innerHTML=DATA;
-    document.querySelector(`${HOLDER||'body'}`).append(MYELEMENT);
+const ADD = (ELEMENT, ELEMENT1) => {
+    CONDITION(
+        ELEMENT,
+        () => ELEMENT.append(ELEMENT1),
+        () => document.body.append(ELEMENT1)
+    );
 };
 export{ADD}

@@ -1,21 +1,17 @@
-const VIEW=(ELEMENT,callback)=>{
-    const MYELEMENT=document.createElement('div');
-    MYELEMENT.style.position='relative';
-    MYELEMENT.style.background='#cdcdcd50';
-    MYELEMENT.style.height='40%';
-    MYELEMENT.style.width='98%'; 
-    MYELEMENT.style.left='1%';
-    MYELEMENT.style.marginTop='1%';
-    MYELEMENT.style.marginBottom='1%';
-    MYELEMENT.style.overflowY='auto';
-    MYELEMENT.style.overflowX='hidden';
-    MYELEMENT.style.display='inline-flex';
-    MYELEMENT.style.borderRadius='5px';
-    if (ELEMENT) {
-        ELEMENT.append(MYELEMENT);
-    } else {
-        document.querySelector('body').append(MYELEMENT);  
-    };
-    callback(MYELEMENT);
+const VIEW = (ELEMENT, ID, COLOR, WIDTH, HEIGHT, callback) => {
+    CREATEELEMENT("div", ID, (ELEMENTS) => {
+        STYLED(ELEMENTS, "position", "relative");
+        STYLED(ELEMENTS, "background", COLOR || "#cdcdcd20");
+        STYLED(ELEMENTS, "width", WIDTH || "100%");
+        STYLED(ELEMENTS, "height", HEIGHT || "100%");
+        STYLED(ELEMENTS, "display", "block");
+        STYLED(ELEMENTS, "margin", "auto");
+        STYLED(ELEMENTS, "overflow-y", "auto");
+        STYLED(ELEMENTS, "margin-top", "1%");
+        STYLED(ELEMENTS, "margin-bottom", "2%");
+        STYLED(ELEMENTS, "border-radius", "5px");
+        ADD(ELEMENT, ELEMENTS);
+        callback(ELEMENTS);
+    });
 };
 export{VIEW};

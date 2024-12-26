@@ -1,8 +1,8 @@
-const CONDITION=(Condition,callback)=>{
-    if (Condition) {
-        callback();
+const CONDITION = (CONDITION, ACTION, ACTION1) => {
+    if (CONDITION) {
+        return ACTION();
     } else {
-        callback();
-    };
+        return ACTION1();
+    }
 };
 export{CONDITION};
