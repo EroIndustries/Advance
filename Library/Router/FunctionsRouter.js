@@ -8,6 +8,8 @@ import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
 import { REDUX } from "../Functions/Redux/Redux.js";
 import { ROUTEJS } from "../Functions/RouteJs/RouteJs.js";
 import { STORE } from "../Functions/Store/Store.js";
+import { STYLED } from "../Functions/Style/Style.js";
+import { ZOOM } from "../Functions/Zoom/Zoom.js";
 import { MODULEUPDATER } from "../Module/ModuleUpdater/ModuleUpdater.js";
 const FUNCTIONROUTES=()=>{
 const DATA=`const ADD=${ADD};
@@ -21,12 +23,14 @@ const INSPECTION=${INSPECTION};
 const NAVIGATOR=${NAVIGATOR};
 const REDUX=${REDUX};
 const DELETESTORE=${DELETESTORE};
+const ZOOM=${ZOOM};
+const STYLED=${STYLED};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const DELETESTORE=${DELETESTORE};
+const STYLED=${STYLED};
 `
 
