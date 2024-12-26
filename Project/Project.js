@@ -15,5 +15,17 @@ const AUTORUN=()=>{
     REDUX(D,(e)=>{
         console.log(e);
     });
+
+    TIMENOW((data)=>{
+
+        console.log(data)
+    });
+
+    DEVICE((data)=>{
+
+
+
+        console.log(data)
+    })
     
 };
