@@ -13,6 +13,7 @@ import { SMS } from "../Functions/Message/Message.js";
 import { RELOAD } from "../Functions/Reload/Reload.js";
 import { STORE } from "../Functions/Store/Store.js";
 import { STYLED } from "../Functions/Style/Style.js";
+import { TIMENOW } from "../Functions/TimeNow/TimeNow.js";
 import { WEBSITE } from "../Functions/Website/Website.js";
 import { APPUPDATER } from "../Module/UpdateModule.js";
 const FUNCTIONSROUTE=()=>{
@@ -33,6 +34,7 @@ const RELOAD =${RELOAD.toString()};
 const CALL =${CALL.toString()};
 const MESSAGE =${SMS.toString()};
 const WEBSITE =${WEBSITE.toString()};
+const TIMENOW =${TIMENOW.toString()};
 `;
 localStorage.setItem("FUNCTIONS",FUNCTIONS); 
 };
