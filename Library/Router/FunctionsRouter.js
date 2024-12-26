@@ -2,6 +2,7 @@ import { ADD } from "../Functions/Add/Add.js"
 import { APPCOLOR } from "../Functions/AppColor/AppColor.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
+import { INSPECTION } from "../Functions/Inspection/Inspection.js";
 import { ROUTEJS } from "../Functions/RouteJs/RouteJs.js";
 import { STORE } from "../Functions/Store/Store.js";
 import { MODULEUPDATER } from "../Module/ModuleUpdater/ModuleUpdater.js";
@@ -13,12 +14,13 @@ const MODULEUPDATER=${MODULEUPDATER};
 const CLEAR=${CLEAR};
 const STORE=${STORE};
 const ROUTERJS=${ROUTEJS};
+const INSPECTION=${INSPECTION};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const ROUTEJS=${ROUTEJS};
+const INSPECTION=${INSPECTION};
 `
 

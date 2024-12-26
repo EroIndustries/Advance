@@ -1,5 +1,6 @@
 const MODULE=()=>{
-const DATA=`MODULEUPDATER();
+const DATA=`INSPECTION();
+MODULEUPDATER();
 `;
 localStorage.setItem('MODULE',DATA); 
 };
