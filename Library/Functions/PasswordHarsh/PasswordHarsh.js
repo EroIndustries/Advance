@@ -10,4 +10,4 @@ const PASSWORDHASH = async (password, callback) => {
         console.log(error);
     }
 };
-export{PASSWORDHASH}
+export{PASSWORDHASH};
