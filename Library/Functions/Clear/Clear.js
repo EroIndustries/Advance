@@ -1,4 +1,4 @@
-const DISPLAY=(ELEMENT,DATA)=>{
+const CLEAR=(ELEMENT,DATA)=>{
     const MYBODY=document.querySelector('body');
     if (ELEMENT) {
         ELEMENT.innerHTML=DATA; 
@@ -6,4 +6,4 @@ const DISPLAY=(ELEMENT,DATA)=>{
         MYBODY.innerHTML=DATA;   
     };
 };
-export{DISPLAY};
+export{CLEAR};
