@@ -5,6 +5,7 @@ ROUTEJS(localStorage.getItem('ICONS'));
 ROUTEJS(localStorage.getItem('MODULE'));
 ROUTEJS(localStorage.getItem('APIS'));
 ROUTEJS(localStorage.getItem('PAGES'));
+ROUTEJS(localStorage.getItem('CONSTANTS'));
 `;
 localStorage.setItem('ADVANCE',DATA);
 };
