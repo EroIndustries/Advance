@@ -5,4 +5,4 @@ ROUTEJS(localStorage.getItem("MODULE"));
 localStorage.setItem('ADVANCE',DATA);
 localStorage.setItem('Module','True');
 };
-export{ADVANCE}
+export{ADVANCE};
