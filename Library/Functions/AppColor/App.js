@@ -5,5 +5,4 @@ const APPCOLOR = (ELEMENT, COLOR) => {
         () => (document.body.style.color = COLOR)
     );
 };
-
 export{APPCOLOR};

@@ -5,4 +5,4 @@ const ADD = (ELEMENT, ELEMENT1) => {
         () => document.body.append(ELEMENT1)
     );
 };
-export{ADD}
+export{ADD};
