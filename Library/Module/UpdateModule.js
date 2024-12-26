@@ -1,7 +1,6 @@
 const APPUPDATER=()=>{
     if (navigator.onLine) {
         if (localStorage.getItem('Environment') === 'Development' ) {
-
             import('../Start/Start.js')
             .then(module =>
                 {
@@ -18,8 +17,7 @@ const APPUPDATER=()=>{
                 }
             );  
         } else {
-
-            import('../Start/Start.js')
+            import('https://eroindustries.github.io/Advance/Start/Start.js')
             .then(module =>
                 {
                     if (typeof module.APPLOAD === 'function') {
