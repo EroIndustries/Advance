@@ -10,10 +10,10 @@ const AUTORUN=()=>{
         },{
             "Name":"James"
         }
-    ]
+    ];
 
     REDUX(D,(e)=>{
         console.log(e);
-    })
+    });
     
 };

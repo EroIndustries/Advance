@@ -1,6 +1,7 @@
 import { ADD } from "../Functions/Add/Add.js"
 import { APPCOLOR } from "../Functions/AppColor/AppColor.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
+import { DELETESTORE } from "../Functions/DeleteStorage/DeleteStorage.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
 import { INSPECTION } from "../Functions/Inspection/Inspection.js";
 import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
@@ -19,12 +20,13 @@ const ROUTERJS=${ROUTEJS};
 const INSPECTION=${INSPECTION};
 const NAVIGATOR=${NAVIGATOR};
 const REDUX=${REDUX};
+const DELETESTORE=${DELETESTORE};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const REDUX=${REDUX};
+const DELETESTORE=${DELETESTORE};
 `
 
