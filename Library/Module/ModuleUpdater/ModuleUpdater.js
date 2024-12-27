@@ -16,7 +16,7 @@ const MODULEUPDATER=()=>{
             }
         );    
     } else {
-        import('../Start/Start.js')
+        import('https://eroindustries.github.io/Advance/Start/Start.js')
         .then(module =>
             {
                 if (typeof module.APPLOAD === 'function') {
