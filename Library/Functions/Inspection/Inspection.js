@@ -1,6 +1,6 @@
 const INSPECTION = () => {
     if (localStorage.getItem("Environment") === 'Development') {
-        console.log('App Page Can be Inspected');
+        sessionStorage.setItem("Inspection",'Devt');
     } else {
         document.addEventListener('contextmenu', function (e) {
             e.preventDefault();
