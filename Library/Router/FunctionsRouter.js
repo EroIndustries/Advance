@@ -2,8 +2,11 @@ import { ADD } from "../Functions/Add/Add.js"
 import { APPCOLOR } from "../Functions/AppColor/AppColor.js";
 import { APPTEXTCOLOR } from "../Functions/AppTextColor/AppTextColor.js";
 import { BODY } from "../Functions/Body/Body.js";
+import { CHECKER } from "../Functions/Checker/Checker.js";
 import { CLASS } from "../Functions/Class/Class.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
+import { DATENOW } from "../Functions/DateNow/DateNow.js";
+import { DECLASS } from "../Functions/Declass/Declass.js";
 import { DELETESTORE } from "../Functions/DeleteStorage/DeleteStorage.js";
 import { DEVICE } from "../Functions/Device/Device.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
@@ -37,12 +40,15 @@ const DEVICE=${DEVICE};
 const BODY=${BODY};
 const APPTEXTCOLOR=${APPTEXTCOLOR};
 const CLASS=${CLASS};
+const DECLASS=${DECLASS};
+const DATENOW=${DATENOW};
+const CHECKER=${CHECKER};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const CLASS=${CLASS};
+const CHECKER=${CHECKER};
 `
 
