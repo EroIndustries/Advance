@@ -1,6 +1,6 @@
 const MODULE=()=>{
 const DATA=`INSPECTION();
-ZOOM();
+ZOOM();BODY();
 MODULEUPDATER();
 `;
 localStorage.setItem('MODULE',DATA); 

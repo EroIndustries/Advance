@@ -1,5 +1,5 @@
 const APPCOLOR=(COLOR)=>{
     const MYBODY=document.querySelector('body');
-    MYBODY.style.color=COLOR;
+    MYBODY.style.background=COLOR;
 };
 export{APPCOLOR};

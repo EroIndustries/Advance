@@ -1,5 +1,9 @@
 const AUTORUN=()=>{
 
+    APPCOLOR('black');
+
+    APPTEXTCOLOR('red');
+
     ADD('','Hello');
 
     const D=[
