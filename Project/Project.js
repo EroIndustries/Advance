@@ -27,8 +27,6 @@ const AUTORUN=()=>{
 
     DEVICE((data)=>{
 
-
-
         console.log(data)
     })
     
