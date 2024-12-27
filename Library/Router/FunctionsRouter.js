@@ -2,6 +2,7 @@ import { ADD } from "../Functions/Add/Add.js"
 import { APPCOLOR } from "../Functions/AppColor/AppColor.js";
 import { APPTEXTCOLOR } from "../Functions/AppTextColor/AppTextColor.js";
 import { BODY } from "../Functions/Body/Body.js";
+import { CLASS } from "../Functions/Class/Class.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
 import { DELETESTORE } from "../Functions/DeleteStorage/DeleteStorage.js";
 import { DEVICE } from "../Functions/Device/Device.js";
@@ -35,12 +36,13 @@ const TIMENOW=${TIMENOW};
 const DEVICE=${DEVICE};
 const BODY=${BODY};
 const APPTEXTCOLOR=${APPTEXTCOLOR};
+const CLASS=${CLASS};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const APPTEXTCOLOR=${APPTEXTCOLOR};
+const CLASS=${CLASS};
 `
 
