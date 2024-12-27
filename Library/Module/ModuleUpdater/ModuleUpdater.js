@@ -1,5 +1,6 @@
 const MODULEUPDATER=()=>{
     if (localStorage.getItem("Environment") === 'Development') {
+        sessionStorage.setItem("Mode",'Devt');
         import('../Start/Start.js')
         .then(module =>
             {
@@ -16,6 +17,7 @@ const MODULEUPDATER=()=>{
             }
         );    
     } else {
+        sessionStorage.setItem("Mode",'Prod');
         import('https://eroindustries.github.io/Advance/Start/Start.js')
         .then(module =>
             {

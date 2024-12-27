@@ -4,4 +4,10 @@ const AUTORUN=()=>{
 
     ADD('','Hello');
 
+    DISPLAY('',`
+
+        <h1>Hello<h1>
+        
+    `);
+
 };
