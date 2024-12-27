@@ -7,10 +7,12 @@ import { CLASS } from "../Functions/Class/Class.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
 import { DATENOW } from "../Functions/DateNow/DateNow.js";
 import { DECLASS } from "../Functions/Declass/Declass.js";
+import { DEJSON } from "../Functions/Dejson/Dejson.js";
 import { DELETESTORE } from "../Functions/DeleteStorage/DeleteStorage.js";
 import { DEVICE } from "../Functions/Device/Device.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
 import { INSPECTION } from "../Functions/Inspection/Inspection.js";
+import { JSONIFICATION } from "../Functions/Jsonification/Jsonification.js";
 import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
 import { REDUX } from "../Functions/Redux/Redux.js";
 import { ROUTEJS } from "../Functions/RouteJs/RouteJs.js";
@@ -43,12 +45,14 @@ const CLASS=${CLASS};
 const DECLASS=${DECLASS};
 const DATENOW=${DATENOW};
 const CHECKER=${CHECKER};
+const JSONIFICATION=${JSONIFICATION};
+const DEJSON=${DEJSON};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const CHECKER=${CHECKER};
+const DEJSON=${DEJSON};
 `
 

@@ -9,5 +9,14 @@ const AUTORUN=()=>{
         <h1>Hello<h1>
         
     `);
+    
+    const DATA=[
+        {
+            "Name":"Hame"
+        },
+        {
+            "Name":"Hame"
+        },
+    ]
 
 };
