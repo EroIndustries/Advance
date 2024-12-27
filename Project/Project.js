@@ -2,7 +2,7 @@ const AUTORUN=()=>{
 
     APPCOLOR('black');
 
-    APPTEXTCOLOR('red');
+    APPTEXTCOLOR('');
 
     ADD('','Hello');
 
