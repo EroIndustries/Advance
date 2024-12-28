@@ -20,7 +20,7 @@ const ANDROIDLOGINPAGE=()=>{
         
     });
 
-    BUTTON('','Log In','','',()=>{
+    BUTTON('','Sign In','','forestgreen',()=>{
 
         alert('')
 
@@ -60,7 +60,7 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
         
     });
 
-    BUTTON('','Sign Uo','','',()=>{
+    BUTTON('','Sign Up','','forestgreen',()=>{
 
         alert('')
 

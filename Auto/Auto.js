@@ -5,6 +5,5 @@ ROUTEJS(localStorage.getItem("MODULE"));
 ROUTEJS(localStorage.getItem("WHITEICONS"));
 `;
 localStorage.setItem('ADVANCE',DATA);
-localStorage.setItem('Module','True');
 };
 export{ADVANCE};
