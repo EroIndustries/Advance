@@ -1,5 +1,7 @@
 const ANDROIDLOGINPAGE=()=>{
 
+    CLEAR('');
+
     BREAK("");BREAK("");
 
     IMAGE('',WHITEAPPICON,(ELEMENT)=>{
@@ -25,6 +27,8 @@ const ANDROIDLOGINPAGE=()=>{
     });
 
     BUTTON('','Create Account','','blue',()=>{
+
+        NAVIGATOR("Yes",ANDROIDCREATEACCOUNTPAGE,'ANDROIDLOGINPAGE');
 
     });
 
@@ -32,6 +36,8 @@ const ANDROIDLOGINPAGE=()=>{
 
 const ANDROIDCREATEACCOUNTPAGE=()=>{
 
+    CLEAR('');
+
     BREAK("");BREAK("");
 
     IMAGE('',WHITEAPPICON,(ELEMENT)=>{
@@ -39,6 +45,10 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
         STYLED(ELEMENT,'width','50%');
         STYLED(ELEMENT,'height','30%');
         STYLED(ELEMENT,'margin-left','25%');
+
+    });
+
+    INPUT("",'text','Enter Your Name',(ELEMENT)=>{
 
     });
 
@@ -50,13 +60,15 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
         
     });
 
-    BUTTON('','Log In','','',()=>{
+    BUTTON('','Sign Uo','','',()=>{
 
         alert('')
 
     });
 
-    BUTTON('','Create Account','','blue',()=>{
+    BUTTON('','Log In','','blue',()=>{
+
+        NAVIGATOR("",ANDROIDLOGINPAGE,'ANDROIDLOGINPAGE');
 
     });
 

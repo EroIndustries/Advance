@@ -1,9 +1,9 @@
-const CLEAR=(ELEMENT,DATA)=>{
+const CLEAR=(ELEMENT)=>{
     const MYBODY=document.querySelector('body');
     if (ELEMENT) {
-        ELEMENT.innerHTML=DATA; 
+        ELEMENT.innerHTML=''; 
     } else {
-        MYBODY.innerHTML=DATA;   
+        MYBODY.innerHTML='';   
     };
 };
 export{CLEAR};
