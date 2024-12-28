@@ -1,0 +1,7 @@
+const ANDROIDHOMEPAGE=()=>{
+
+    IMAGE('','#',(ELEMENT)=>{
+
+    });
+
+};
