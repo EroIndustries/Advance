@@ -37,7 +37,6 @@ const CONFIGURATION=()=>{
                     } 
                 } 
             });
-            
         } )
         .catch(error =>{
             console.log(error);
