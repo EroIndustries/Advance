@@ -4,7 +4,7 @@ const ANDROIDLOGINPAGE=()=>{
 
     BREAK("");BREAK("");
 
-    IMAGE('',WHITEAPPICON,(ELEMENT)=>{
+    IMAGE('',localStorage.getItem("AppIcon"),(ELEMENT)=>{
 
         STYLED(ELEMENT,'width','50%');
         STYLED(ELEMENT,'height','30%');
@@ -40,7 +40,7 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
 
     BREAK("");BREAK("");
 
-    IMAGE('',WHITEAPPICON,(ELEMENT)=>{
+    IMAGE('',localStorage.getItem("AppIcon"),(ELEMENT)=>{
 
         STYLED(ELEMENT,'width','50%');
         STYLED(ELEMENT,'height','30%');

@@ -3,6 +3,7 @@ const CONFIGURATION=()=>{
         "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?gid=0#gid=0",
         "sheetName":"AppManager"
     }
+
     if (localStorage.getItem("Environment") === 'Development') {
         if (!localStorage.getItem("Module")) {   
             localStorage.setItem('Module','True');   
@@ -16,68 +17,49 @@ const CONFIGURATION=()=>{
             return;
         } 
     } else { 
-    fetch('https://script.google.com/macros/s/AKfycby5S_I3_hu6iEB0n8I7cmFZ9liA1kGPpQ-9ewmTcJmkUuMCYY540oaGDwJGE4ADs6tv5w/exec',{
-        method:"Post",
-        body:JSON.stringify(DATA)
-    })
-    .then(res =>res.json())
-    .then(data =>{
-        data.forEach(element => {   
-            if (element.ID === localStorage.getItem('NAME')) {
 
-                if (!localStorage.getItem("Module")) {  
-                    
-                    localStorage.setItem('Module','True');  
-
-                    if (localStorage.getItem("Environment") === 'Production') {
-
-                        var DATA=`const AppIcons='${element.AppIcons}';
-                        const Functions='${element.Functions}';
-                        const FunctionsOne='${element.FunctionsOne}';
-                        const JsonOne='${element.JsonOne}';
-                    
-                        `;
+        fetch('https://script.google.com/macros/s/AKfycby5S_I3_hu6iEB0n8I7cmFZ9liA1kGPpQ-9ewmTcJmkUuMCYY540oaGDwJGE4ADs6tv5w/exec',{
+            method:"Post",
+            body:JSON.stringify(DATA)
+        })
+        .then(res =>res.json())
+        .then(data =>{
+            data.forEach(element => {   
+                if (element.ID === localStorage.getItem('NAME')) {
+    
+                    if (!localStorage.getItem("Module")) {  
                         
-                        localStorage.setItem('PROJECT',DATA);
+                        localStorage.setItem('Module','True');  
+    
+                        if (localStorage.getItem("Environment") === 'Development') {
+    
+                            const DATA=`${element.Functions}${element.FunctionOne}`;
+                            localStorage.setItem('PROJECT',DATA);
+                            localStorage.setItem('AppIcon',element.AppIcons);
+                            return;
+                            
+                        } ;
     
                         setTimeout(() => {
-                            if (localStorage.getItem("Environment") === 'Production') {        
-                                Android.reloadPage();                               
-                            } else {                               
-                                location.href='./index.html';      
-                            }            
+                            if (localStorage.getItem('Environment')==='Production') {
+                                Android.reloadPage();
+                            }else{
+                                location.href='./index.html';
+                            };
+                            
                         }, 2000);
-    
+                       
+                        console.log(element);
                         return;
-                        
-                    } ;
-                    if (localStorage.getItem("Environment") === 'Test') {
-    
-                        var DATA=`const AppIcons='${element.AppIcons}';
-                        const Functions='${element.Functions}';
-                        const FunctionsOne='${element.FunctionsOne}';
-                        const JsonOne='${element.JsonOne}';
-                    
-                        `;
-                        localStorage.setItem('PROJECT',DATA);
-                        setTimeout(() => {
-                            if (localStorage.getItem("Environment") === 'Production') {        
-                                Android.reloadPage();                               
-                            } else {                               
-                                location.href='./index.html';      
-                            }            
-                        }, 2000);
-                        return; 
-                    } 
-                    console.log(element);
-                    return;
-                };
-            } ;
+                    };
+                } ;
+            });
+        } )
+        .catch(error =>{
+            console.log(error);
         });
-    } )
-    .catch(error =>{
-        console.log(error);
-    });
+
     };
+
 };
 export{CONFIGURATION};
