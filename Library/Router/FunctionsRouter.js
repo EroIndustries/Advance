@@ -6,6 +6,7 @@ import { BREAK } from "../Functions/Break/Break.js";
 import { CHECKER } from "../Functions/Checker/Checker.js";
 import { CLASS } from "../Functions/Class/Class.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
+import { CONDITION } from "../Functions/Condition/Condition.js";
 import { DATENOW } from "../Functions/DateNow/DateNow.js";
 import { DECLASS } from "../Functions/Declass/Declass.js";
 import { DEJSON } from "../Functions/Dejson/Dejson.js";
@@ -57,12 +58,13 @@ const UPDATEINDEXED=${UPDATEINDEXED};
 const TELEGRAM=${TELEGRAM};
 const SHUFFLE=${SHUFFLE};
 const BREAK=${BREAK};
+const CONDITION=${CONDITION};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const BREAK=${BREAK};
+const CONDITION=${CONDITION};
 `
 
