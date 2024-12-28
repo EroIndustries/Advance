@@ -1,4 +1,4 @@
-const BUTTON=(ELEMENT,DATA,callback)=>{
+const BUTTON=(ELEMENT,DATA,COLOR,BGCOLOR,callback)=>{
     const MYBODY=document.querySelector('body');
     const MYELEMENT=document.createElement("button");
     MYELEMENT.style.width='98%';
@@ -7,12 +7,17 @@ const BUTTON=(ELEMENT,DATA,callback)=>{
     MYELEMENT.style.left='1%';
     MYELEMENT.style.marginTop='1rem';
     MYELEMENT.style.outline='none';
+    MYELEMENT.style.border='none';
     MYELEMENT.innerHTML=DATA||'Click Here';
+    MYELEMENT.style.background=BGCOLOR||'#cdcdcd80';
+    MYELEMENT.style.color=COLOR||'#cdcdcd';
     if (ELEMENT) {
         ELEMENT.append(MYELEMENT);
     } else {
         MYBODY.append(MYELEMENT);  
     };
-    callback(MYELEMENT);
+    MYELEMENT.addEventListener('click',()=>{
+        callback();
+    });
 };
 export{BUTTON};

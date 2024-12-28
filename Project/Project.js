@@ -4,6 +4,4 @@ const AUTORUN=()=>{
 
     ANDROIDHOMEPAGE();
 
-  
-
 };

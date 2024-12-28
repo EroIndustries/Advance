@@ -18,11 +18,13 @@ const ANDROIDHOMEPAGE=()=>{
         
     });
 
-    BUTTON('','Log In',(ELEMENT)=>{
+    BUTTON('','Log In','','',()=>{
+
+        alert('')
 
     });
 
-    BUTTON('','Create Account',(ELEMENT)=>{
+    BUTTON('','Create Account','','blue',()=>{
 
     });
 
