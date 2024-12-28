@@ -6,14 +6,17 @@ const ANDROIDHOMEPAGE=()=>{
 
         STYLED(ELEMENT,'width','50%');
         STYLED(ELEMENT,'height','30%');
-
         STYLED(ELEMENT,'margin-left','25%');
 
     });
 
-    INPUT("");
+    INPUT("",'email','Enter Your Email',(ELEMENT)=>{
 
-    INPUT("");
+    });
+
+    INPUT("",'password','Enter Your Password',(ELEMENT)=>{
+        
+    });
 
     BUTTON('','Log In',(ELEMENT)=>{
 
