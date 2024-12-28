@@ -16,9 +16,13 @@ import { JSONIFICATION } from "../Functions/Jsonification/Jsonification.js";
 import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
 import { REDUX } from "../Functions/Redux/Redux.js";
 import { ROUTEJS } from "../Functions/RouteJs/RouteJs.js";
+import { SHUFFLE } from "../Functions/Shuffle/Shuffle.js";
 import { STORE } from "../Functions/Store/Store.js";
+import { STOREINDEXED } from "../Functions/StoreIndex/StoreIndex.js";
 import { STYLED } from "../Functions/Style/Style.js";
+import { TELEGRAM } from "../Functions/Telegram/Telegram.js";
 import { TIMENOW } from "../Functions/TimeNow/TimeNow.js";
+import { UPDATEINDEXED } from "../Functions/UpdateIndex/UpdateIndex.js";
 import { WEBSITE } from "../Functions/WebSite/WebSite.js";
 import { ZOOM } from "../Functions/Zoom/Zoom.js";
 import { MODULEUPDATER } from "../Module/ModuleUpdater/ModuleUpdater.js";
@@ -47,12 +51,16 @@ const DATENOW=${DATENOW};
 const CHECKER=${CHECKER};
 const JSONIFICATION=${JSONIFICATION};
 const DEJSON=${DEJSON};
+const STOREINDEXED=${STOREINDEXED};
+const UPDATEINDEXED=${UPDATEINDEXED};
+const TELEGRAM=${TELEGRAM};
+const SHUFFLE=${SHUFFLE};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const DEJSON=${DEJSON};
+const SHUFFLE=${SHUFFLE};
 `
 
