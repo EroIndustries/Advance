@@ -1,3 +1,4 @@
+import { BUTTON } from "../Components/Button/Button.js";
 import { ICON } from "../Components/Icon/Icon.js";
 import { IMAGE } from "../Components/Image/Image.js";
 import { INPUT } from "../Components/Input/Input.js";
@@ -7,10 +8,11 @@ const DATA=`const INPUT=${INPUT};
 const TEXTAREA=${TEXTAREA};
 const ICON=${ICON};
 const IMAGE=${IMAGE};
+const BUTTON=${BUTTON};
 `;
 localStorage.setItem("COMPONENTS",DATA);
 };
 export{COMPONENTSROUTERS};
 `
-const IMAGE=${IMAGE};
+const BUTTON=${BUTTON};
 `

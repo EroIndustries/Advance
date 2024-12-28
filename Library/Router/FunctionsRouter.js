@@ -2,6 +2,7 @@ import { ADD } from "../Functions/Add/Add.js"
 import { APPCOLOR } from "../Functions/AppColor/AppColor.js";
 import { APPTEXTCOLOR } from "../Functions/AppTextColor/AppTextColor.js";
 import { BODY } from "../Functions/Body/Body.js";
+import { BREAK } from "../Functions/Break/Break.js";
 import { CHECKER } from "../Functions/Checker/Checker.js";
 import { CLASS } from "../Functions/Class/Class.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
@@ -55,12 +56,13 @@ const STOREINDEXED=${STOREINDEXED};
 const UPDATEINDEXED=${UPDATEINDEXED};
 const TELEGRAM=${TELEGRAM};
 const SHUFFLE=${SHUFFLE};
+const BREAK=${BREAK};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const SHUFFLE=${SHUFFLE};
+const BREAK=${BREAK};
 `
 
