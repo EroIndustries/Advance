@@ -2,21 +2,12 @@ const AUTORUN=()=>{
 
     APPCOLOR('black');
 
-    ADD('','Hello');
+    INPUT("");
 
-    DISPLAY('',`
+    INPUT("");
 
-        <h1>Hello<h1>
-        
-    `);
-    
-    const DATA=[
-        {
-            "Name":"Hame"
-        },
-        {
-            "Name":"Hame"
-        },
-    ];
+    INPUT("");
+
+  
 
 };
