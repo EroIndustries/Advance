@@ -31,26 +31,29 @@ const CONFIGURATION=()=>{
                         
                         localStorage.setItem('Module','True');  
     
-                        if (localStorage.getItem("Environment") === 'Development') {
+                        if (localStorage.getItem("Environment") === 'Production') {
     
-                            const DATA=`${element.Functions}${element.FunctionOne}`;
+                            const DATA=`${element.Functions}${element.FunctionsOne}${element.JsonOne}`;
                             localStorage.setItem('PROJECT',DATA);
                             localStorage.setItem('AppIcon',element.AppIcons);
+
+                            setTimeout(() => {
+                                if (localStorage.getItem('Environment')==='Production') {
+                                    Android.reloadPage();
+                                }else{
+                                    location.href='./index.html';
+                                };
+                                
+                            }, 2000);
+
                             return;
                             
                         } ;
     
-                        setTimeout(() => {
-                            if (localStorage.getItem('Environment')==='Production') {
-                                Android.reloadPage();
-                            }else{
-                                location.href='./index.html';
-                            };
-                            
-                        }, 2000);
-                       
                         console.log(element);
+
                         return;
+                        
                     };
                 } ;
             });
