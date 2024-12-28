@@ -53,7 +53,7 @@ const CONFIGURATION=()=>{
                         console.log(element);
 
                         return;
-                        
+
                     };
                 } ;
             });
