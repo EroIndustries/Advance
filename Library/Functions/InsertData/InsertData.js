@@ -6,7 +6,6 @@ const INSERTDATA=(URL,NAME,HEADERS,DATA,callback)=>{
         "Data":DATA
     };
     if (navigator.onLine) {
-
         fetch('https://script.google.com/macros/s/AKfycbyfMnGzbYAbyK5TzUZ2Og9IH8QDlG81yUydnWQ5fCLzJYHj9Y36KvpaeYZoLYjQ5iDsUQ/exec',{
             method:"POST",
             body:JSON.stringify(Data)
@@ -18,4 +17,4 @@ const INSERTDATA=(URL,NAME,HEADERS,DATA,callback)=>{
         .catch(error =>{console.log(error)});
     };
 };
-export{INSERTDATA}
+export{INSERTDATA};
