@@ -1,4 +1,4 @@
-const INPUT=(ELEMENT,TYPE,HOLDER,callback)=>{
+const INPUT=(ELEMENT,TYPE,HOLDER,COLOR,callback)=>{
     const MYBODY=document.querySelector('body');
     const MYELEMENT=document.createElement("Input");
     MYELEMENT.style.width='95%';
@@ -9,6 +9,10 @@ const INPUT=(ELEMENT,TYPE,HOLDER,callback)=>{
     MYELEMENT.style.outline='none';
     MYELEMENT.type=TYPE||'text';
     MYELEMENT.placeholder=HOLDER||'Your Text';
+    MYELEMENT.style.background='transparent';
+    MYELEMENT.style.border='none';
+    MYELEMENT.style.borderBottom='1px solid #cdcdcd50';
+    MYELEMENT.style.color=COLOR||'#cdcdcd';
     if (ELEMENT) {
         ELEMENT.append(MYELEMENT);
     } else {

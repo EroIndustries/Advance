@@ -12,11 +12,11 @@ const ANDROIDLOGINPAGE=()=>{
 
     });
 
-    INPUT("",'email','Enter Your Email',(ELEMENT)=>{
+    INPUT("",'email','Enter Your Email','',(ELEMENT)=>{
 
     });
 
-    INPUT("",'password','Enter Your Password',(ELEMENT)=>{
+    INPUT("",'password','*********','',(ELEMENT)=>{
         
     });
 
@@ -48,15 +48,15 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
 
     });
 
-    INPUT("",'text','Enter Your Name',(ELEMENT)=>{
+    INPUT("",'text','Enter Your Name','',(ELEMENT)=>{
 
     });
 
-    INPUT("",'email','Enter Your Email',(ELEMENT)=>{
+    INPUT("",'email','Enter Your Email','',(ELEMENT)=>{
 
     });
 
-    INPUT("",'password','Enter Your Password',(ELEMENT)=>{
+    INPUT("",'password','*********','',(ELEMENT)=>{
         
     });
 
