@@ -5,7 +5,7 @@ const FULLVIEW=(ELEMENT,callback)=>{
     MYELEMENT.style.width='100%';
     MYELEMENT.style.height='100%';
     MYELEMENT.style.display='block';
-    MYELEMENT.style.background='#cdcdcd80';
+    MYELEMENT.style.background='#cdcdcd10';
     MYELEMENT.style.overflowX='hidden';
     MYELEMENT.style.overflowY='auto';
     if (ELEMENT) {

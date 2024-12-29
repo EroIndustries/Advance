@@ -1,4 +1,3 @@
-
 const ANDROIDLOGINPAGE=()=>{
 
     CLEAR('');
@@ -84,7 +83,15 @@ const ANDROIDHOMEPAGE=()=>{
 
    CLEAR('');
 
-   FULLVIEW('',()=>{
+   FULLVIEW('',(ELEMENT)=>{
+
+        VIEW(ELEMENT,()=>{
+
+        })
+
+        VIEW(ELEMENT,()=>{
+
+        })
 
    })
 };
