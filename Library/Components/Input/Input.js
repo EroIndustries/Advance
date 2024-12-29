@@ -13,6 +13,8 @@ const INPUT=(ELEMENT,TYPE,HOLDER,COLOR,callback)=>{
     MYELEMENT.style.border='none';
     MYELEMENT.style.borderBottom='1px solid #cdcdcd50';
     MYELEMENT.style.color=COLOR||'#cdcdcd';
+    MYELEMENT.autocomplete = 'off';
+    MYELEMENT.maxLength = 49000;
     if (ELEMENT) {
         ELEMENT.append(MYELEMENT);
     } else {
