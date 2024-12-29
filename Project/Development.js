@@ -1,3 +1,4 @@
+
 const ANDROIDLOGINPAGE=()=>{
 
     CLEAR('');
@@ -81,6 +82,9 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
 
 const ANDROIDHOMEPAGE=()=>{
 
-    console.log('Working')
+   CLEAR('');
 
+   FULLVIEW('',()=>{
+
+   })
 };
