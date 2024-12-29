@@ -5,11 +5,12 @@ const ANDROIDLOGINPAGE=()=>{
     BREAK("");BREAK("");
 
     IMAGE('',localStorage.getItem("AppIcon"),(ELEMENT)=>{
-
         STYLED(ELEMENT,'width','50%');
         STYLED(ELEMENT,'height','30%');
         STYLED(ELEMENT,'margin-left','25%');
-
+        CLICKED(ELEMENT,()=>{
+            RELOAD();
+        });
     });
 
     INPUT("",'email','Enter Your Email','',(ELEMENT)=>{
@@ -45,6 +46,10 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
         STYLED(ELEMENT,'width','50%');
         STYLED(ELEMENT,'height','30%');
         STYLED(ELEMENT,'margin-left','25%');
+
+        CLICKED(ELEMENT,()=>{
+            RELOAD();
+        });
 
     });
 

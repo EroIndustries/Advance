@@ -6,6 +6,7 @@ import { BREAK } from "../Functions/Break/Break.js";
 import { CHECKER } from "../Functions/Checker/Checker.js";
 import { CLASS } from "../Functions/Class/Class.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
+import { CLICKED } from "../Functions/Clicked/Clicked.js";
 import { CONDITION } from "../Functions/Condition/Condition.js";
 import { DATENOW } from "../Functions/DateNow/DateNow.js";
 import { DECLASS } from "../Functions/Declass/Declass.js";
@@ -61,12 +62,13 @@ const SHUFFLE=${SHUFFLE};
 const BREAK=${BREAK};
 const CONDITION=${CONDITION};
 const RELOAD=${RELOAD};
+const CLICKED=${CLICKED};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const RELOAD=${RELOAD};
+const CLICKED=${CLICKED};
 `
 
