@@ -81,6 +81,6 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
 
 const ANDROIDHOMEPAGE=()=>{
 
-    alert('Working')
+    console.log('Working')
 
 };

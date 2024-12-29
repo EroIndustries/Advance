@@ -1,0 +1,4 @@
+const FULLVIEW=()=>{
+
+};
+export{FULLVIEW};
