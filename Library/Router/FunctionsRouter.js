@@ -17,6 +17,7 @@ import { INSPECTION } from "../Functions/Inspection/Inspection.js";
 import { JSONIFICATION } from "../Functions/Jsonification/Jsonification.js";
 import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
 import { REDUX } from "../Functions/Redux/Redux.js";
+import { RELOAD } from "../Functions/Reload/Reload.js";
 import { ROUTEJS } from "../Functions/RouteJs/RouteJs.js";
 import { SHUFFLE } from "../Functions/Shuffle/Shuffle.js";
 import { STORE } from "../Functions/Store/Store.js";
@@ -59,12 +60,13 @@ const TELEGRAM=${TELEGRAM};
 const SHUFFLE=${SHUFFLE};
 const BREAK=${BREAK};
 const CONDITION=${CONDITION};
+const RELOAD=${RELOAD};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const CONDITION=${CONDITION};
+const RELOAD=${RELOAD};
 `
 
