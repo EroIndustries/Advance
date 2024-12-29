@@ -14,6 +14,7 @@ import { DEJSON } from "../Functions/Dejson/Dejson.js";
 import { DELETESTORE } from "../Functions/DeleteStorage/DeleteStorage.js";
 import { DEVICE } from "../Functions/Device/Device.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
+import { INSERTDATA } from "../Functions/InsertData/InsertData.js";
 import { INSPECTION } from "../Functions/Inspection/Inspection.js";
 import { JSONIFICATION } from "../Functions/Jsonification/Jsonification.js";
 import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
@@ -63,12 +64,13 @@ const BREAK=${BREAK};
 const CONDITION=${CONDITION};
 const RELOAD=${RELOAD};
 const CLICKED=${CLICKED};
+const INSERTDATA=${INSERTDATA};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const CLICKED=${CLICKED};
+const INSERTDATA=${INSERTDATA};
 `
 
