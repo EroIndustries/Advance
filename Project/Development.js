@@ -83,15 +83,7 @@ const ANDROIDHOMEPAGE=()=>{
 
    CLEAR('');
 
-   FULLVIEW('',(ELEMENT)=>{
-
-        VIEW(ELEMENT,()=>{
-
-        })
-
-        VIEW(ELEMENT,()=>{
-
-        })
+   HEADER('',()=>{
 
    })
 };

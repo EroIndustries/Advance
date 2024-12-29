@@ -1,8 +1,11 @@
 import { BUTTON } from "../Components/Button/Button.js";
+import { FOOTER } from "../Components/Footer/Footer.js";
 import { FULLVIEW } from "../Components/FullView/FullView.js";
+import { HEADER } from "../Components/Header/Header.js";
 import { ICON } from "../Components/Icon/Icon.js";
 import { IMAGE } from "../Components/Image/Image.js";
 import { INPUT } from "../Components/Input/Input.js";
+import { ROUNDFOOTER } from "../Components/RoundFooter/RoundFooter.js";
 import { TEXTAREA } from "../Components/TextArea/TextArea.js";
 import { VIEW } from "../Components/View/View.js";
 const COMPONENTSROUTERS=()=>{
@@ -13,10 +16,13 @@ const IMAGE=${IMAGE};
 const BUTTON=${BUTTON};
 const VIEW=${VIEW};
 const FULLVIEW=${FULLVIEW};
+const FOOTER=${FOOTER};
+const ROUNDFOOTER=${ROUNDFOOTER};
+const HEADER=${HEADER};
 `;
 localStorage.setItem("COMPONENTS",DATA);
 };
 export{COMPONENTSROUTERS};
 `
-const FULLVIEW=${FULLVIEW};
+const HEADER=${HEADER};
 `
