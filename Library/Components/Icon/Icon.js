@@ -1,4 +1,4 @@
-const ICON=(ELEMENT,callback)=>{
+const ICON=(ELEMENT,SOURCE,callback)=>{
     const MYBODY=document.querySelector('body');
     const MYELEMENT=document.createElement("img");
     MYELEMENT.style.width='25px';
@@ -6,6 +6,7 @@ const ICON=(ELEMENT,callback)=>{
     MYELEMENT.style.position='relative';
     MYELEMENT.style.margin='auto';
     MYELEMENT.style.outline='none';
+    MYELEMENT.src=SOURCE;
     if (ELEMENT) {
         ELEMENT.append(MYELEMENT);
     } else {

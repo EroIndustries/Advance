@@ -81,9 +81,22 @@ const ANDROIDCREATEACCOUNTPAGE=()=>{
 
 const ANDROIDHOMEPAGE=()=>{
 
-   CLEAR('');
+    CLEAR('');
 
-   HEADER('',()=>{
+    ROUNDFOOTER('',(ELEMENT)=>{
 
-   })
+        ICON(ELEMENT,WHITELISTICON,()=>{
+
+        });
+
+        ICON(ELEMENT,WHITEMOVIESICON,()=>{
+
+        });
+
+        ICON(ELEMENT,WHITEUSERHOLDERICON,()=>{
+
+        });
+
+    });
+
 };
