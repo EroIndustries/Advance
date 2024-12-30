@@ -20,6 +20,8 @@ const INPUT=(ELEMENT,TYPE,HOLDER,COLOR,callback)=>{
     } else {
         MYBODY.append(MYELEMENT);  
     };
-    callback(MYELEMENT);
+    MYELEMENT.addEventListener('input',()=>{
+        callback(MYELEMENT.value);
+    });
 };
 export{INPUT};

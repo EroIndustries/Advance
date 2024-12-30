@@ -1,4 +1,4 @@
-const TEXTAREA=(ELEMENT)=>{
+const TEXTAREA=(ELEMENT,callback)=>{
     const MYBODY=document.querySelector('body');
     const MYELEMENT=document.createElement("TextArea");
     MYELEMENT.style.width='95%';
@@ -12,5 +12,8 @@ const TEXTAREA=(ELEMENT)=>{
     } else {
         MYBODY.append(MYELEMENT);  
     }; 
+    MYELEMENT.addEventListener('input',()=>{
+        callback(MYELEMENT.value);
+    });
 };
 export{TEXTAREA};

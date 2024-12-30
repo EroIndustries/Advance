@@ -2,7 +2,7 @@ const AUTORUN=()=>{
 
     APPCOLOR('black');
 
-    CONDITION(!localStorage.getItem('UserData'),()=>{
+    CONDITION(localStorage.getItem('UserData'),()=>{
 
         NAVIGATOR("",ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
 
