@@ -17,7 +17,7 @@ const BUTTON=(ELEMENT,DATA,COLOR,BGCOLOR,callback)=>{
         MYBODY.append(MYELEMENT);  
     };
     MYELEMENT.addEventListener('click',()=>{
-        callback();
+        callback(MYELEMENT);
     });
 };
 export{BUTTON};
