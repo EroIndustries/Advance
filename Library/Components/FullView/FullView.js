@@ -1,11 +1,11 @@
-const FULLVIEW=(ELEMENT,callback)=>{
+const FULLVIEW=(ELEMENT,COLOR,callback)=>{
     const MYBODY=document.querySelector('body');
     const MYELEMENT=document.createElement("div");
     MYELEMENT.style.position='absolute';
     MYELEMENT.style.width='100%';
     MYELEMENT.style.height='100%';
     MYELEMENT.style.display='block';
-    MYELEMENT.style.background='#cdcdcd10';
+    MYELEMENT.style.background=COLOR||'#cdcdcd10';
     MYELEMENT.style.overflowX='hidden';
     MYELEMENT.style.overflowY='auto';
     if (ELEMENT) {

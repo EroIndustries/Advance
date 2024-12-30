@@ -83,6 +83,10 @@ const ANDROIDHOMEPAGE=()=>{
 
     CLEAR('');
 
+    FULLVIEW('','',()=>{
+
+    });
+
     ROUNDFOOTER('',(ELEMENT)=>{
 
         ICON(ELEMENT,WHITELISTICON,()=>{
