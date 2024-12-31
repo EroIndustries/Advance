@@ -16,7 +16,6 @@ const MODULEUPDATER=()=>{
             }
         );    
     } else {
-        sessionStorage.setItem("Mode",'Prod');
         import('https://eroindustries.github.io/Advance/Start/Start.js')
         .then(module =>
             {
