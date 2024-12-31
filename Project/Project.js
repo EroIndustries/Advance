@@ -1,3 +1,4 @@
+
 const AUTORUN=()=>{
 
     APPCOLOR('black');

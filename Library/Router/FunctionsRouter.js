@@ -29,6 +29,7 @@ import { STOREINDEXED } from "../Functions/StoreIndex/StoreIndex.js";
 import { STYLED } from "../Functions/Style/Style.js";
 import { TELEGRAM } from "../Functions/Telegram/Telegram.js";
 import { TIMENOW } from "../Functions/TimeNow/TimeNow.js";
+import { UPDATEDATA } from "../Functions/UpdateData/UpdateData.js";
 import { UPDATEINDEXED } from "../Functions/UpdateIndex/UpdateIndex.js";
 import { WEBSITE } from "../Functions/WebSite/WebSite.js";
 import { ZOOM } from "../Functions/Zoom/Zoom.js";
@@ -69,12 +70,13 @@ const CLICKED=${CLICKED};
 const INSERTDATA=${INSERTDATA};
 const GETDATA=${GETDATA};
 const FINDER=${FINDER};
+const UPDATEDATA=${UPDATEDATA};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const FINDER=${FINDER};
+const UPDATEDATA=${UPDATEDATA};
 `
 
