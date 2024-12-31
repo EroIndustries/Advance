@@ -21,10 +21,40 @@ const HOMEAPPS=(ELEMENT)=>{
                         STYLED(ELEMENTEDS,'height','80%');
                         
                     });
-                   
-                });
 
-                console.log(Element);
+                    TEXT(ELEMENTED,'',Element.AppName,(ELEMENTEDS)=>{
+
+                        STYLED(ELEMENTEDS,'text-align','right');
+                        STYLED(ELEMENTEDS,'margin-right','5%');
+                        STYLED(ELEMENTEDS,'margin-top','3%');
+
+                    })
+
+                    ICON(ELEMENTED,WHITESTARICON,(ELEMENTEDS)=>{
+
+                        STYLED(ELEMENTEDS,'position','absolute');
+                        STYLED(ELEMENTEDS,'bottom','9%');
+                        STYLED(ELEMENTEDS,'left','2%');
+                        
+                    });
+
+                    TEXT(ELEMENTED,'',Element.AppRatings,(ELEMENTEDS)=>{
+
+                        STYLED(ELEMENTEDS,'position','absolute');
+                        STYLED(ELEMENTEDS,'text-align','left');
+                        STYLED(ELEMENTEDS,'bottom','8%');
+                        STYLED(ELEMENTEDS,'left','20%');
+                        STYLED(ELEMENTEDS,'font-size','25px');
+                        STYLED(ELEMENTEDS,'color','forestgreen');
+                    })
+                   
+                    if (Element.ID === 'acb46b20f5afbeb05aa453e' ) {
+
+                        STYLED(ELEMENTED,'display','none');
+                        
+                    };
+
+                });
 
             });
 

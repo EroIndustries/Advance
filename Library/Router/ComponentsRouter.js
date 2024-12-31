@@ -6,6 +6,7 @@ import { ICON } from "../Components/Icon/Icon.js";
 import { IMAGE } from "../Components/Image/Image.js";
 import { INPUT } from "../Components/Input/Input.js";
 import { ROUNDFOOTER } from "../Components/RoundFooter/RoundFooter.js";
+import { TEXT } from "../Components/Text/Text.js";
 import { TEXTAREA } from "../Components/TextArea/TextArea.js";
 import { VIEW } from "../Components/View/View.js";
 const COMPONENTSROUTERS=()=>{
@@ -19,10 +20,11 @@ const FULLVIEW=${FULLVIEW};
 const FOOTER=${FOOTER};
 const ROUNDFOOTER=${ROUNDFOOTER};
 const HEADER=${HEADER};
+const TEXT=${TEXT};
 `;
 localStorage.setItem("COMPONENTS",DATA);
 };
 export{COMPONENTSROUTERS};
 `
-const HEADER=${HEADER};
+const TEXT=${TEXT};
 `
