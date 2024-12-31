@@ -1,4 +1,4 @@
-const CLICKED=(ELEMENT)=>{
+const CLICKED=(ELEMENT,callback)=>{
     ELEMENT.addEventListener('click',()=>{
         callback();
     });

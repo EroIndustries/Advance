@@ -1,4 +1,4 @@
-const ROUNDFOOTER=(ELEMENT,callback)=>{
+const ROUNDFOOTER=(ELEMENT,COLOR,callback)=>{
     const MYBODY=document.querySelector('body');
     const MYELEMENT=document.createElement("footer");
     MYELEMENT.style.position='absolute';
@@ -7,7 +7,7 @@ const ROUNDFOOTER=(ELEMENT,callback)=>{
     MYELEMENT.style.left='2.5%';
     MYELEMENT.style.bottom='10px';
     MYELEMENT.style.display='inline-flex';
-    MYELEMENT.style.background='#cdcdcd20';
+    MYELEMENT.style.background=COLOR||'#cdcdcd20';
     MYELEMENT.style.overflow='hidden';
     MYELEMENT.style.borderRadius='50px';
     if (ELEMENT) {

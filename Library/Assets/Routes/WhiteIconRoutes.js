@@ -1,4 +1,5 @@
 import { APPICON } from "../Icons/White/AppIcon/AppIcon.js";
+import { GAMEICON } from "../Icons/White/GameIcon/GameIcon.js";
 import { LIBRARYICON } from "../Icons/White/LibraryIcon/LibraryIcon.js";
 import { LISTICON } from "../Icons/White/ListIcon/ListIcon.js";
 import { MOVIESICON } from "../Icons/White/MovieIcon/MovieIcon.js";
@@ -12,10 +13,11 @@ const WHITEUSERHOLDERICON='${USERHOLDERICON}';
 const WHITELIBRARYICON='${LIBRARYICON}';
 const WHITELISTICON='${LISTICON}';
 const WHITEMOVIESICON='${MOVIESICON}';
+const WHITEGAMEICON='${GAMEICON}';
 `;
 localStorage.setItem("WHITEICONS",DATA);
 };
 export{WHITEICONSROUTES};
 `
-const WHITEMOVIESICON='${MOVIESICON}';
+const WHITEGAMEICON='${GAMEICON}';
 `
