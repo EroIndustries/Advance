@@ -2,7 +2,9 @@ const ANDROIDHOMEPAGE=()=>{
 
     CLEAR("");
 
-    FULLVIEW('','',()=>{
+    FULLVIEW('','',(ELEMENT)=>{
+
+        HOMEAPPS(ELEMENT);
 
     });
 

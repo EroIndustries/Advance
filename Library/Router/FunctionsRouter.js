@@ -17,6 +17,7 @@ import { DEVICE } from "../Functions/Device/Device.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
 import { FINDER } from "../Functions/Finder/Finder.js";
 import { GETDATA } from "../Functions/GetData/GetData.js";
+import { GETINDEXED } from "../Functions/GetIndex/GetIndex.js";
 import { IMAGEPICKER } from "../Functions/ImagePicker/ImagePicker.js";
 import { INSERTDATA } from "../Functions/InsertData/InsertData.js";
 import { INSPECTION } from "../Functions/Inspection/Inspection.js";
@@ -87,11 +88,12 @@ const JSONREMOVER=${JSONREMOVER};
 const JSONADDER=${JSONADDER};
 const JSONSORTER=${JSONSORTER};
 const TWITTER=${TWITTER};
+const GETINDEXED=${GETINDEXED};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const TWITTER=${TWITTER};
+const GETINDEXED=${GETINDEXED};
 `
