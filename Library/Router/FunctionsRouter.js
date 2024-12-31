@@ -1,6 +1,7 @@
 import { ADD } from "../Functions/Add/Add.js"
 import { APPCOLOR } from "../Functions/AppColor/AppColor.js";
 import { APPTEXTCOLOR } from "../Functions/AppTextColor/AppTextColor.js";
+import { AUDIOPICKER } from "../Functions/AudioPicker/AudioPicker.js";
 import { BODY } from "../Functions/Body/Body.js";
 import { BREAK } from "../Functions/Break/Break.js";
 import { CHECKER } from "../Functions/Checker/Checker.js";
@@ -16,9 +17,13 @@ import { DEVICE } from "../Functions/Device/Device.js";
 import { DISPLAY } from "../Functions/Display/Display.js";
 import { FINDER } from "../Functions/Finder/Finder.js";
 import { GETDATA } from "../Functions/GetData/GetData.js";
+import { IMAGEPICKER } from "../Functions/ImagePicker/ImagePicker.js";
 import { INSERTDATA } from "../Functions/InsertData/InsertData.js";
 import { INSPECTION } from "../Functions/Inspection/Inspection.js";
+import { JSONADDER } from "../Functions/JsonAdder/JsonAdder.js";
 import { JSONIFICATION } from "../Functions/Jsonification/Jsonification.js";
+import { JSONREMOVER } from "../Functions/JsonRemover/JsonRemover.js";
+import { JSONSORTER } from "../Functions/JsonSorter/JsonSorter.js";
 import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
 import { REDUX } from "../Functions/Redux/Redux.js";
 import { RELOAD } from "../Functions/Reload/Reload.js";
@@ -29,8 +34,11 @@ import { STOREINDEXED } from "../Functions/StoreIndex/StoreIndex.js";
 import { STYLED } from "../Functions/Style/Style.js";
 import { TELEGRAM } from "../Functions/Telegram/Telegram.js";
 import { TIMENOW } from "../Functions/TimeNow/TimeNow.js";
+import { TOKENIZATION } from "../Functions/Tokenization/Tokenization.js";
+import { TWITTER } from "../Functions/Twitter/Twitter.js";
 import { UPDATEDATA } from "../Functions/UpdateData/UpdateData.js";
 import { UPDATEINDEXED } from "../Functions/UpdateIndex/UpdateIndex.js";
+import { VIDEOPICKER } from "../Functions/VideoPicker/VideoPicker.js";
 import { WEBSITE } from "../Functions/WebSite/WebSite.js";
 import { ZOOM } from "../Functions/Zoom/Zoom.js";
 import { MODULEUPDATER } from "../Module/ModuleUpdater/ModuleUpdater.js";
@@ -71,12 +79,20 @@ const INSERTDATA=${INSERTDATA};
 const GETDATA=${GETDATA};
 const FINDER=${FINDER};
 const UPDATEDATA=${UPDATEDATA};
+const TOKENIZATION=${TOKENIZATION};
+const VIDEOPICKER=${VIDEOPICKER};
+const IMAGEPICKER=${IMAGEPICKER};
+const AUDIOPICKER=${AUDIOPICKER};
+const JSONREMOVER=${JSONREMOVER};
+const JSONADDER=${JSONADDER};
+const JSONSORTER=${JSONSORTER};
+const TWITTER=${TWITTER};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const UPDATEDATA=${UPDATEDATA};
+const TWITTER=${TWITTER};
 `
 
