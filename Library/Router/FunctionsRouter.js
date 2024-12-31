@@ -95,4 +95,3 @@ export{FUNCTIONROUTES};
 `
 const TWITTER=${TWITTER};
 `
-
