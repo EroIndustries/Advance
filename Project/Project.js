@@ -19,6 +19,18 @@ const AUTORUN=()=>{
 
             };
 
+            HIDER(500,()=>{
+
+                if (MyData === true) {
+
+                    NAVIGATOR('',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
+    
+                    return;
+                    
+                };
+
+            });
+
         });
 
     });

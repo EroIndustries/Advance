@@ -18,6 +18,7 @@ import { DISPLAY } from "../Functions/Display/Display.js";
 import { FINDER } from "../Functions/Finder/Finder.js";
 import { GETDATA } from "../Functions/GetData/GetData.js";
 import { GETINDEXED } from "../Functions/GetIndex/GetIndex.js";
+import { HIDER } from "../Functions/Hider/Hider.js";
 import { IMAGEPICKER } from "../Functions/ImagePicker/ImagePicker.js";
 import { INSERTDATA } from "../Functions/InsertData/InsertData.js";
 import { INSPECTION } from "../Functions/Inspection/Inspection.js";
@@ -89,11 +90,12 @@ const JSONADDER=${JSONADDER};
 const JSONSORTER=${JSONSORTER};
 const TWITTER=${TWITTER};
 const GETINDEXED=${GETINDEXED};
+const HIDER=${HIDER};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const GETINDEXED=${GETINDEXED};
+const HIDER=${HIDER};
 `
