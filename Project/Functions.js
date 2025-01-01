@@ -60,9 +60,9 @@ const HOMEAPPS=(ELEMENT)=>{
 
                             STORE('','AppDetails',MyDaa);
 
-                            NAVIGATOR('',APPPAGE,'ANDROIDHOMEPAGE');
+                            NAVIGATOR('Yes',APPPAGE,'ANDROIDHOMEPAGE');
     
-                        })
+                        });
 
                     });
 
