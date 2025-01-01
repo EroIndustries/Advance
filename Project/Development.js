@@ -269,69 +269,72 @@ const ANDROIDUSERPAGE=()=>{
     });
 };
 
-const APPPAGE=(Element)=>{
+const APPPAGE=()=>{
 
-    console.log(Element);
+    DEJSON(sessionStorage.getItem('AppDetails'),(Element)=>{
 
-    CLEAR("");
+        CLEAR("");
 
-    FULLVIEW('','',(ELEMENT)=>{
+        FULLVIEW('','',(ELEMENT)=>{
 
-        STYLED(ELEMENT,'top','50px');
+            STYLED(ELEMENT,'top','50px');
 
-        ICON(ELEMENT,Element.AppImage,(ELEMENTED)=>{
-            STYLED(ELEMENTED,'width','50%');
-            STYLED(ELEMENTED,'height','50%');
-            STYLED(ELEMENTED,'border-radius','5%');
-            STYLED(ELEMENTED,'margin-top','1%');
-            STYLED(ELEMENTED,'margin-left','1%');
-
-        });
-
-        BUTTON(ELEMENT,' ','','green',()=>{
-
-            WEBSITE(DRIVEDIRECTLINK +Element.AppLink);
-
-        },(ELEMENTES)=>{
-
-            STYLED(ELEMENTES,'display','inline-flex');
-
-            TEXT(ELEMENTES,'','Install',(ELEMENTEDS)=>{
-
-                STYLED(ELEMENTEDS,'text-align','left');
-                STYLED(ELEMENTEDS,'margin-left','1%');
-                STYLED(ELEMENTEDS,'color','#ffffff');
+            ICON(ELEMENT,Element.AppImage,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'width','50%');
+                STYLED(ELEMENTED,'height','50%');
+                STYLED(ELEMENTED,'border-radius','5%');
+                STYLED(ELEMENTED,'margin-top','1%');
+                STYLED(ELEMENTED,'margin-left','1%');
 
             });
 
-            ICON(ELEMENTES,WHITEDOWNLOADICON,(ELEMENTED)=>{
-                STYLED(ELEMENTED,'margin-right','5%');
+            BUTTON(ELEMENT,' ','','green',()=>{
+
+                WEBSITE(DRIVEDIRECTLINK +Element.AppLink);
+
+            },(ELEMENTES)=>{
+
+                STYLED(ELEMENTES,'display','inline-flex');
+
+                TEXT(ELEMENTES,'','Install',(ELEMENTEDS)=>{
+
+                    STYLED(ELEMENTEDS,'text-align','left');
+                    STYLED(ELEMENTEDS,'margin-left','1%');
+                    STYLED(ELEMENTEDS,'color','#ffffff');
+
+                });
+
+                ICON(ELEMENTES,WHITEDOWNLOADICON,(ELEMENTED)=>{
+                    STYLED(ELEMENTED,'margin-right','5%');
+                });
+
+            });
+
+        });
+
+        HEADER('','transparent',(ELEMENT)=>{
+
+            ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+
+                STYLED(ELEMENTED,'margin-left','1%');
+
+                CLICKED(ELEMENTED,()=>{
+                
+                    NAVIGATOR('Yes',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
+
+                });
+
+            });
+
+            TEXT(ELEMENT,'',Element.AppName,(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','right');
+                STYLED(ELEMENTEDS,'margin-right','5%');
+
             });
 
         });
 
     });
 
-    HEADER('','transparent',(ELEMENT)=>{
-
-        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
-
-            STYLED(ELEMENTED,'margin-left','1%');
-
-            CLICKED(ELEMENTED,()=>{
-               
-                NAVIGATOR('Yes',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
-
-            });
-
-        });
-
-        TEXT(ELEMENT,'',Element.AppName,(ELEMENTEDS)=>{
-
-            STYLED(ELEMENTEDS,'text-align','right');
-            STYLED(ELEMENTEDS,'margin-right','5%');
-
-        });
-
-    });
 };

@@ -55,8 +55,14 @@ const HOMEAPPS=(ELEMENT)=>{
                     };
 
                     CLICKED(ELEMENTED,()=>{
-                        
-                        APPPAGE(Element);
+
+                        JSONIFICATION(Element,(MyDaa)=>{
+
+                            STORE('','AppDetails',MyDaa);
+
+                            NAVIGATOR('',APPPAGE,'ANDROIDHOMEPAGE');
+    
+                        })
 
                     });
 
