@@ -33,7 +33,7 @@ const CONFIGURATION=()=>{
     
                         if (localStorage.getItem("Environment") === 'Production') {
     
-                            const DATA=`${element.Functions}${element.FunctionsOne}${element.JsonOne}`;
+                            const DATA=`${element.Functions}${element.FunctionsOne}${element.JsonOne}${element.FunctionThree}`;
                             localStorage.setItem('PROJECT',DATA);
                             localStorage.setItem('AppIcon',element.AppIcons);
 
