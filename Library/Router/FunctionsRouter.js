@@ -9,6 +9,7 @@ import { CLASS } from "../Functions/Class/Class.js";
 import { CLEAR } from "../Functions/Clear/Clear.js";
 import { CLICKED } from "../Functions/Clicked/Clicked.js";
 import { CONDITION } from "../Functions/Condition/Condition.js";
+import { DATASORTER } from "../Functions/DataSorter/DataSorter.js";
 import { DATENOW } from "../Functions/DateNow/DateNow.js";
 import { DECLASS } from "../Functions/Declass/Declass.js";
 import { DEJSON } from "../Functions/Dejson/Dejson.js";
@@ -91,11 +92,12 @@ const JSONSORTER=${JSONSORTER};
 const TWITTER=${TWITTER};
 const GETINDEXED=${GETINDEXED};
 const HIDER=${HIDER};
+const DATASORTER=${DATASORTER};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const HIDER=${HIDER};
+const DATASORTER=${DATASORTER};
 `

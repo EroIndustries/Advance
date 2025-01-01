@@ -1,5 +1,10 @@
 const ANDROIDHOMEPAGE=()=>{
 
+    CHECKER(!localStorage.getItem('LikedApps'),()=>{
+
+        STORE('local','LikedApps','');
+    });
+
     CLEAR("");
 
     FULLVIEW('','',(ELEMENT)=>{
@@ -367,6 +372,51 @@ const APPPAGE=()=>{
                         STYLED(ELEMENTEDS,'margin-right','1%');
                         STYLED(ELEMENTEDS,'color','#ffffff');
 
+                    });
+
+                });
+
+                VIEW(ELEMENTED,(ELEMENTS)=>{
+
+                    STYLED(ELEMENTS,'position','absolute');
+                    STYLED(ELEMENTS,'bottom','0');
+                    STYLED(ELEMENTS,'height','50px');
+                    STYLED(ELEMENTS,'height','50px');
+                    STYLED(ELEMENTS,'display','inline-flex');
+
+                    DEJSON(localStorage.getItem('LikedApps'),(LikedData)=>{
+
+                        DATASORTER(LikedData,Element.ID,(ResBack)=>{
+
+                            CONDITION(ResBack === true,()=>{
+                                ICON(ELEMENTS,WHITEHEARTICON,(ELEMENTED)=>{
+                                    CLICKED(ELEMENTED,()=>{
+                                        JSONREMOVER(localStorage.getItem("LikedApps"),[Element.ID],(data)=>{
+                                            STORE('local','LikedApps',data);
+                                            APPPAGE();
+                                        });
+                                    })
+                                });
+                            },()=>{
+                                ICON(ELEMENTS,WHITEUNHEARTICON,(ELEMENTED)=>{
+                                    CLICKED(ELEMENTED,()=>{
+            
+                                        JSONADDER(localStorage.getItem("LikedApps"),[Element.ID],(data)=>{
+                                            STORE('local','LikedApps',data);
+                                            APPPAGE();
+                                        });
+                                    });
+                                });
+                            } );
+                        });
+                    });
+                    
+                    ICON(ELEMENTS,WHITECOMMENTICON,(ELEMENTED)=>{
+                        
+                    });
+
+                    ICON(ELEMENTS,WHITESHAREICON,(ELEMENTED)=>{
+                        
                     });
 
                 });
