@@ -229,6 +229,8 @@ const ANDROIDUSERPAGE=()=>{
 
         BUTTON(ELEMENT,' ','','green',()=>{
 
+            NAVIGATOR('Yes',ANDROIDCONTACTUSPAGE,'ANDROIDUSERPAGE');
+
         },(ELEMENTES)=>{
 
             STYLED(ELEMENTES,'display','inline-flex');
@@ -242,28 +244,6 @@ const ANDROIDUSERPAGE=()=>{
             });
 
             ICON(ELEMENTES,WHITEPHONEICON,(ELEMENTED)=>{
-                STYLED(ELEMENTED,'margin-right','5%');
-            });
-
-        });
-
-        BUTTON(ELEMENT,' ','','green',()=>{
-
-            WEBSITE(DRIVEDIRECTLINK+'1CLK0Xwq495wrNogzsIOw5qnLLi_JKk3F');
-
-        },(ELEMENTES)=>{
-
-            STYLED(ELEMENTES,'display','inline-flex');
-
-            TEXT(ELEMENTES,'','Update App',(ELEMENTEDS)=>{
-
-                STYLED(ELEMENTEDS,'text-align','left');
-                STYLED(ELEMENTEDS,'margin-left','1%');
-                STYLED(ELEMENTEDS,'color','#ffffff');
-
-            });
-
-            ICON(ELEMENTES,WHITEMOBILEDEVELOPMENTICON,(ELEMENTED)=>{
                 STYLED(ELEMENTED,'margin-right','5%');
             });
 
@@ -760,6 +740,28 @@ const ANDROIDSETTINGSPAGE=()=>{
 
         });
 
+        BUTTON(ELEMENT,' ','','green',()=>{
+
+            WEBSITE(DRIVEDIRECTLINK+'1CLK0Xwq495wrNogzsIOw5qnLLi_JKk3F');
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Update App',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITEMOBILEDEVELOPMENTICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
     });
 
     HEADER('','transparent',(ELEMENT)=>{
@@ -770,21 +772,78 @@ const ANDROIDSETTINGSPAGE=()=>{
 
             CLICKED(ELEMENTED,()=>{
 
-                CONDITION(sessionStorage.getItem('Paged'),()=>{
-
-                    NAVIGATOR('',APPPAGE,'APPPAGE');
-
-                },()=>{
-
-                    NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
-
-                });
+                NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
 
             });
 
         });
 
         TEXT(ELEMENT,'','Preferences',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','right');
+            STYLED(ELEMENTEDS,'margin-right','5%');
+
+        });
+
+    });
+
+};
+
+const ANDROIDCONTACTUSPAGE=()=>{
+
+    DELETESTORE("",'UserEmail');
+
+    CLEAR("");
+
+    FULLVIEW('','transparent',(ELEMENT)=>{
+
+        STYLED(ELEMENT,'top','50px');
+
+        TEXT(ELEMENT,'','Fill The Form Below',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','center');
+
+        });
+
+        INPUT(ELEMENT,'','Enter Your Name','',()=>{
+
+        });
+
+        INPUT(ELEMENT,'email','Enter Your Email','',()=>{
+            
+        });
+
+        INPUT(ELEMENT,'','Enter Your Location','',()=>{
+            
+        });
+
+        TEXTAREA(ELEMENT,'Leave Your Message',()=>{
+
+        });
+
+        BUTTON(ELEMENT,'Send Message','','green',()=>{
+
+        },(ELEMENTES)=>{
+
+        });
+
+    });
+
+    HEADER('','transparent',(ELEMENT)=>{
+
+        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+
+            STYLED(ELEMENTED,'margin-left','1%');
+
+            CLICKED(ELEMENTED,()=>{
+
+                NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
+
+            });
+
+        });
+
+        TEXT(ELEMENT,'','Reach us',(ELEMENTEDS)=>{
 
             STYLED(ELEMENTEDS,'text-align','right');
             STYLED(ELEMENTEDS,'margin-right','5%');
