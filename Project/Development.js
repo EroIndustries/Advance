@@ -131,7 +131,7 @@ const ANDROIDUSERPAGE=()=>{
             ICON(ELEMENTED,WHITEUSERHOLDERICON,(ELEMENTEDS)=>{
 
                 STYLED(ELEMENTEDS,'width','50%');
-                STYLED(ELEMENTEDS,'height','50%');
+                STYLED(ELEMENTEDS,'height','70%');
 
             });
 
@@ -145,7 +145,7 @@ const ANDROIDUSERPAGE=()=>{
 
             },()=>{
 
-                BUTTON(ELEMENTED,'Sign In','','forestgreen',(ELEMENTS)=>{
+                BUTTON(ELEMENTED,'Sign In','','blue',(ELEMENTS)=>{
 
                 },(ELEMENTS)=>{
                     STYLED(ELEMENTS,'width','30%');
@@ -153,7 +153,7 @@ const ANDROIDUSERPAGE=()=>{
                     STYLED(ELEMENTS,'bottom','5%');
                     STYLED(ELEMENTS,'right','5px');
                     STYLED(ELEMENTS,'left','auto');
-                    STYLED(ELEMENTS,'border-radius','50px');
+                    STYLED(ELEMENTS,'border-radius','10px');
                 });
                 
             });
