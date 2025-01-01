@@ -817,7 +817,7 @@ const ANDROIDCONTACTUSPAGE=()=>{
             
         });
 
-        TEXTAREA(ELEMENT,'Leave Your Message',()=>{
+        TEXTAREA(ELEMENT,'Leave Your Message','',()=>{
 
         });
 
