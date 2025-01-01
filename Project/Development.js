@@ -207,6 +207,26 @@ const ANDROIDUSERPAGE=()=>{
 
         BUTTON(ELEMENT,' ','','green',()=>{
 
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Business Tools',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITECREATEDONICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+        BUTTON(ELEMENT,' ','','green',()=>{
+
             NAVIGATOR('Yes',ANDROIDSETTINGSPAGE,'ANDROIDUSERPAGE');
 
         },(ELEMENTES)=>{
