@@ -27,6 +27,7 @@ import { JSONIFICATION } from "../Functions/Jsonification/Jsonification.js";
 import { JSONREMOVER } from "../Functions/JsonRemover/JsonRemover.js";
 import { JSONSORTER } from "../Functions/JsonSorter/JsonSorter.js";
 import { NAVIGATOR } from "../Functions/Navigator/Navigator.js";
+import { PROJECTDOWNLOAD } from "../Functions/ProjectDownload/ProjectDownload.js";
 import { REDUX } from "../Functions/Redux/Redux.js";
 import { RELOAD } from "../Functions/Reload/Reload.js";
 import { ROUTEJS } from "../Functions/RouteJs/RouteJs.js";
@@ -91,11 +92,12 @@ const JSONSORTER=${JSONSORTER};
 const TWITTER=${TWITTER};
 const GETINDEXED=${GETINDEXED};
 const HIDER=${HIDER};
+const PROJECTDOWNLOAD=${PROJECTDOWNLOAD};
 `;
 localStorage.setItem("FUNCTIONS",DATA);
 };
 export{FUNCTIONROUTES};
 
 `
-const HIDER=${HIDER};
+const PROJECTDOWNLOAD=${PROJECTDOWNLOAD};
 `
