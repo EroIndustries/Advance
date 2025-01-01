@@ -54,6 +54,12 @@ const HOMEAPPS=(ELEMENT)=>{
                         
                     };
 
+                    CLICKED(ELEMENTED,()=>{
+                        
+                        APPPAGE(Element);
+
+                    });
+
                 });
 
             });

@@ -1,5 +1,6 @@
 import { APPICON } from "../Icons/White/AppIcon/AppIcon.js";
 import { BACKICON } from "../Icons/White/BackIcon/BackIcon.js";
+import { DOWNLOADICON } from "../Icons/White/DownloadIcon/DownloadIcon.js";
 import { GAMEICON } from "../Icons/White/GameIcon/GameIcon.js";
 import { HELPICON } from "../Icons/White/HelpIcon/HelpIcon.js";
 import { LIBRARYICON } from "../Icons/White/LibraryIcon/LibraryIcon.js";
@@ -26,10 +27,11 @@ const WHITESETTINGSICON='${SETTINGSICON}';
 const WHITEPHONEICON='${PHONEICON}';
 const WHITEHELPICON='${HELPICON}';
 const WHITESYNICON='${SYNICON}';
+const WHITEDOWNLOADICON='${DOWNLOADICON}';
 `;
 localStorage.setItem("WHITEICONS",DATA);
 };
 export{WHITEICONSROUTES};
 `
-const WHITESYNICON='${SYNICON}';
+const WHITEDOWNLOADICON='${DOWNLOADICON}';
 `
