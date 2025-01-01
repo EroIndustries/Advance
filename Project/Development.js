@@ -124,6 +124,125 @@ const ANDROIDUSERPAGE=()=>{
 
         STYLED(ELEMENT,'top','50px');
 
+        VIEW(ELEMENT,(ELEMENTED)=>{
+
+            STYLED(ELEMENTED,'display','inline-flex');
+
+            ICON(ELEMENTED,WHITEUSERHOLDERICON,(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'width','50%');
+                STYLED(ELEMENTEDS,'height','50%');
+
+            });
+
+            CONDITION(localStorage.getItem("UserData"),()=>{
+
+                BUTTON(ELEMENTED,'Sign In','','blue',()=>{
+
+                },()=>{
+
+                });
+
+            },()=>{
+
+                BUTTON(ELEMENTED,'Sign In','','forestgreen',(ELEMENTS)=>{
+
+                },(ELEMENTS)=>{
+                    STYLED(ELEMENTS,'width','30%');
+                    STYLED(ELEMENTS,'position','absolute');
+                    STYLED(ELEMENTS,'bottom','5%');
+                    STYLED(ELEMENTS,'right','5px');
+                    STYLED(ELEMENTS,'left','auto');
+                    STYLED(ELEMENTS,'border-radius','50px');
+                });
+                
+            });
+
+        });
+
+        BUTTON(ELEMENT,' ','','',()=>{
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Settings',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITESETTINGSICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+        BUTTON(ELEMENT,' ','','',()=>{
+
+            RELOAD();
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Sync',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITESYNICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+        BUTTON(ELEMENT,' ','','',()=>{
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Help',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITEHELPICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+        BUTTON(ELEMENT,' ','','',()=>{
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Contact Us',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITEPHONEICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+
     });
 
     HEADER('','transparent',(ELEMENT)=>{

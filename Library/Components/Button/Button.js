@@ -1,4 +1,4 @@
-const BUTTON=(ELEMENT,DATA,COLOR,BGCOLOR,callback)=>{
+const BUTTON=(ELEMENT,DATA,COLOR,BGCOLOR,callback,callback1)=>{
     const MYBODY=document.querySelector('body');
     const MYELEMENT=document.createElement("button");
     MYELEMENT.style.width='98%';
@@ -19,5 +19,6 @@ const BUTTON=(ELEMENT,DATA,COLOR,BGCOLOR,callback)=>{
     MYELEMENT.addEventListener('click',()=>{
         callback(MYELEMENT);
     });
+    callback1(MYELEMENT);
 };
 export{BUTTON};
