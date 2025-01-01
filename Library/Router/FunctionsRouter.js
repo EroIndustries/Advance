@@ -97,5 +97,5 @@ localStorage.setItem("FUNCTIONS",DATA);
 export{FUNCTIONROUTES};
 
 `
-const PROJECTDOWNLOAD=${ff};
+const HIDER=${HIDER};
 `
