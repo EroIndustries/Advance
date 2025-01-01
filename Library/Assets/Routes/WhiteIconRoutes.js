@@ -11,6 +11,7 @@ import { LISTICON } from "../Icons/White/ListIcon/ListIcon.js";
 import { MOBILEDEVELOPMENTICON } from "../Icons/White/MobileDevelopmentIcon/MobileDevelopmentIcon.js";
 import { MOVIESICON } from "../Icons/White/MovieIcon/MovieIcon.js";
 import { PHONEICON } from "../Icons/White/PhoneIcon/PhoneIcon.js";
+import { PRIVACYPOLICYICON } from "../Icons/White/PrivacyPolicyIcon/PrivacyPolicyIcon.js";
 import { SETTINGSICON } from "../Icons/White/SettingIcon/SettingIcon.js";
 import { SHAREICON } from "../Icons/White/ShareIcon/ShareIcon.js";
 import { STARICON } from "../Icons/White/StarIcon/StarIcon.js";
@@ -40,10 +41,11 @@ const WHITESHAREICON='${SHAREICON}';
 const WHITECOMMENTICON='${COMMENTICON}';
 const WHITEUNHEARTICON='${UNHEARTICON}';
 const WHITEMOBILEDEVELOPMENTICON='${MOBILEDEVELOPMENTICON}';
+const WHITEPRIVACYPOLICYICON='${PRIVACYPOLICYICON}';
 `;
 localStorage.setItem("WHITEICONS",DATA);
 };
 export{WHITEICONSROUTES};
 `
-const WHITEMOBILEDEVELOPMENTICON='${MOBILEDEVELOPMENTICON}';
+const WHITEPRIVACYPOLICYICON='${PRIVACYPOLICYICON}';
 `
