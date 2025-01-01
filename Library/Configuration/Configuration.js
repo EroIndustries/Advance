@@ -55,6 +55,17 @@ const CONFIGURATION=()=>{
                         return;
 
                     };
+
+                    if (localStorage.getItem("Module")) {
+
+                        const DATA=`${element.Functions}${element.FunctionsOne}${element.JsonOne}${element.FunctionThree}`;
+                        localStorage.setItem('PROJECT',DATA);
+                        localStorage.setItem('AppIcon',element.AppIcons);
+
+                        return;
+                        
+                    };
+
                 } ;
             });
         } )
