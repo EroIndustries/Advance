@@ -128,6 +128,10 @@ const ANDROIDGAMEPAGE=()=>{
 
 const ANDROIDUSERPAGE=()=>{
 
+    HIDER(100,()=>{
+        STORE('','PreviousPage','ANDROIDHOMEPAGE');
+    });
+
     CLEAR("");
 
     FULLVIEW('','transparent',(ELEMENT)=>{
@@ -147,9 +151,18 @@ const ANDROIDUSERPAGE=()=>{
 
             CONDITION(localStorage.getItem("UserData"),()=>{
 
-                BUTTON(ELEMENTED,'Sign In','','blue',()=>{
+                BUTTON(ELEMENTED,'My Account','','blue',(ELEMENT)=>{
 
-                },()=>{
+                    NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
+                                                        
+                },(ELEMENTS)=>{
+
+                    STYLED(ELEMENTS,'width','30%');
+                    STYLED(ELEMENTS,'position','absolute');
+                    STYLED(ELEMENTS,'bottom','5%');
+                    STYLED(ELEMENTS,'right','5px');
+                    STYLED(ELEMENTS,'left','auto');
+                    STYLED(ELEMENTS,'border-radius','10px');
 
                 });
 
@@ -254,6 +267,25 @@ const ANDROIDUSERPAGE=()=>{
 
         });
 
+        BUTTON(ELEMENT,' ','','green',()=>{
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Update App',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITEPHONEICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
 
     });
 
@@ -283,6 +315,10 @@ const ANDROIDUSERPAGE=()=>{
 
 const APPPAGE=()=>{
 
+    HIDER(100,()=>{
+        STORE('','PreviousPage','ANDROIDHOMEPAGE');
+    });
+
     DELETESTORE('','Paged');
 
     DEJSON(sessionStorage.getItem('AppDetails'),(Element)=>{
@@ -294,12 +330,12 @@ const APPPAGE=()=>{
             STYLED(ELEMENT,'top','50px');
 
             ICON(ELEMENT,Element.AppImage,(ELEMENTED)=>{
-                STYLED(ELEMENTED,'width','50%');
-                STYLED(ELEMENTED,'height','50%');
-                STYLED(ELEMENTED,'border-radius','5%');
-                STYLED(ELEMENTED,'margin-top','1%');
-                STYLED(ELEMENTED,'margin-left','1%');
-
+                STYLED(ELEMENTED,'width','48%');
+                STYLED(ELEMENTED,'height','30%');
+                STYLED(ELEMENTED,'margin','auto');
+                STYLED(ELEMENTED,'margin-left','0.5%');
+                STYLED(ELEMENTED,'margin-right','0.5%');
+                STYLED(ELEMENTED,'margin-top','3%');
             });
 
             VIEW(ELEMENT,(ELEMENTED)=>{
@@ -309,7 +345,7 @@ const APPPAGE=()=>{
                 STYLED(ELEMENTED,'top','0%');
                 STYLED(ELEMENTED,'left','auto');
                 STYLED(ELEMENTED,'width','50%');
-                STYLED(ELEMENTED,'height','50%');
+                STYLED(ELEMENTED,'height','30%');
                 STYLED(ELEMENTED,'background','transparent');
 
                 
@@ -521,6 +557,8 @@ const APPPAGE=()=>{
 
 const SIGNACCOUNTPAGE=()=>{
 
+    DELETESTORE("",'UserEmail');
+
     CLEAR("");
 
     FULLVIEW('','transparent',(ELEMENT)=>{
@@ -535,11 +573,86 @@ const SIGNACCOUNTPAGE=()=>{
 
         });
 
-        INPUT(ELEMENT,'email','Enter Your Email','',()=>{
+        INPUT(ELEMENT,'email','Enter Your Email','',(ELE)=>{
+
+            STORE("",'UserEmail',ELE);
 
         });
 
-        BUTTON(ELEMENT,'Access Now','','green',()=>{
+        BUTTON(ELEMENT,'Access Now','','green',(ELEMENT)=>{
+
+            const LINK='https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?pli=1&gid=1692936594#gid=1692936594';
+
+            CONDITION(sessionStorage.getItem('UserEmail'),()=>{
+
+                CHECKER(navigator.onLine,()=>{
+
+                    DISPLAY(ELEMENT,'Please Wait');
+
+                    GETDATA(LINK,'StoreUsers',(data)=>{
+
+                        FINDER(data,'UserEmail',sessionStorage.getItem('UserEmail'),(Mydata)=>{
+
+                            CONDITION(Mydata ,()=>{
+
+                                JSONIFICATION(Mydata,(SavedUser)=>{
+
+                                    STORE('local','UserData',SavedUser);
+
+                                    NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
+                                    
+                                });
+
+                            },()=>{
+
+                                DATENOW((Now)=>{
+
+                                    const DATA=[sessionStorage.getItem('UserEmail'),Now,'Active']
+                                    const HEADERS=['UserEmail','Device','CreatedOn','Status'];
+    
+                                    INSERTDATA(LINK,'StoreUsers',HEADERS,DATA,()=>{
+
+                                        GETDATA(LINK,'StoreUsers',(MyDatata)=>{
+
+                                            FINDER(MyDatata,'UserEmail',sessionStorage.getItem('UserEmail'),(Mydata)=>{
+
+                                                CONDITION(Mydata ,()=>{
+
+                                                    JSONIFICATION(Mydata,(SavedUser)=>{
+
+                                                        STORE('local','UserData',SavedUser);
+                    
+                                                        NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
+                                                        
+                                                    });
+
+                                                },()=>{
+
+                                                    alert("Failed to Link Device to Your Account");
+
+                                                });
+
+                                            });
+                                
+                                        });
+
+                                        NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
+    
+                                    });
+    
+                                });
+
+                            });
+
+                        });
+
+                    });
+
+                });
+
+            },()=>{
+                alert("Enter Your Email")
+            })
 
         },(ELEMENTES)=>{
 
@@ -578,4 +691,39 @@ const SIGNACCOUNTPAGE=()=>{
 
     });
 
+};
+
+const ANDROIDUSERACCOUNTPAGE=()=>{
+
+    CLEAR("");
+
+    FULLVIEW('','transparent',(ELEMENT)=>{
+
+        STYLED(ELEMENT,'top','50px');
+
+    
+    });
+
+    HEADER('','transparent',(ELEMENT)=>{
+
+        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+
+            STYLED(ELEMENTED,'margin-left','1%');
+
+            CLICKED(ELEMENTED,()=>{
+               
+                NAVIGATOR('Yes',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
+
+            });
+
+        });
+
+        TEXT(ELEMENT,'','My Account Profile',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','right');
+            STYLED(ELEMENTEDS,'margin-right','5%');
+
+        });
+
+    });
 };

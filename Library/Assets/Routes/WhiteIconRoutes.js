@@ -8,6 +8,7 @@ import { HEARTICON } from "../Icons/White/HeartIcon/HeartIcon.js";
 import { HELPICON } from "../Icons/White/HelpIcon/HelpIcon.js";
 import { LIBRARYICON } from "../Icons/White/LibraryIcon/LibraryIcon.js";
 import { LISTICON } from "../Icons/White/ListIcon/ListIcon.js";
+import { MOBILEDEVELOPMENTICON } from "../Icons/White/MobileDevelopmentIcon/MobileDevelopmentIcon.js";
 import { MOVIESICON } from "../Icons/White/MovieIcon/MovieIcon.js";
 import { PHONEICON } from "../Icons/White/PhoneIcon/PhoneIcon.js";
 import { SETTINGSICON } from "../Icons/White/SettingIcon/SettingIcon.js";
@@ -38,10 +39,11 @@ const WHITEHEARTICON='${HEARTICON}';
 const WHITESHAREICON='${SHAREICON}';
 const WHITECOMMENTICON='${COMMENTICON}';
 const WHITEUNHEARTICON='${UNHEARTICON}';
+const WHITEMOBILEDEVELOPMENTICON='${MOBILEDEVELOPMENTICON}';
 `;
 localStorage.setItem("WHITEICONS",DATA);
 };
 export{WHITEICONSROUTES};
 `
-const WHITEUNHEARTICON='${UNHEARTICON}';
+const WHITEMOBILEDEVELOPMENTICON='${MOBILEDEVELOPMENTICON}';
 `
