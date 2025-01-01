@@ -249,6 +249,8 @@ const ANDROIDUSERPAGE=()=>{
 
         BUTTON(ELEMENT,' ','','green',()=>{
 
+            NAVIGATOR('Yes',ANDROIDHELPPAGE,'ANDROIDUSERPAGE');
+
         },(ELEMENTES)=>{
 
             STYLED(ELEMENTES,'display','inline-flex');
@@ -762,26 +764,6 @@ const ANDROIDSETTINGSPAGE=()=>{
 
         BUTTON(ELEMENT,' ','','green',()=>{
 
-        },(ELEMENTES)=>{
-
-            STYLED(ELEMENTES,'display','inline-flex');
-
-            TEXT(ELEMENTES,'','Privacy Policy',(ELEMENTEDS)=>{
-
-                STYLED(ELEMENTEDS,'text-align','left');
-                STYLED(ELEMENTEDS,'margin-left','1%');
-                STYLED(ELEMENTEDS,'color','#ffffff');
-
-            });
-
-            ICON(ELEMENTES,WHITEPRIVACYPOLICYICON,(ELEMENTED)=>{
-                STYLED(ELEMENTED,'margin-right','5%');
-            });
-
-        });
-
-        BUTTON(ELEMENT,' ','','green',()=>{
-
             WEBSITE(DRIVEDIRECTLINK+'1CLK0Xwq495wrNogzsIOw5qnLLi_JKk3F');
 
         },(ELEMENTES)=>{
@@ -884,6 +866,104 @@ const ANDROIDCONTACTUSPAGE=()=>{
         });
 
         TEXT(ELEMENT,'','Reach us',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','right');
+            STYLED(ELEMENTEDS,'margin-right','5%');
+
+        });
+
+    });
+
+};
+
+const ANDROIDHELPPAGE=()=>{
+
+    DELETESTORE("",'UserEmail');
+
+    CLEAR("");
+
+    FULLVIEW('','transparent',(ELEMENT)=>{
+
+        STYLED(ELEMENT,'top','50px');
+
+        BUTTON(ELEMENT,' ','','green',()=>{
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Privacy Policy',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITEPRIVACYPOLICYICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+        BUTTON(ELEMENT,' ','','green',()=>{
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','App Help',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITEPARENTALGUIDANCEICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+        BUTTON(ELEMENT,' ','','green',()=>{
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Terms and Condtions',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITECAUTIONICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+        
+    });
+
+    HEADER('','transparent',(ELEMENT)=>{
+
+        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+
+            STYLED(ELEMENTED,'margin-left','1%');
+
+            CLICKED(ELEMENTED,()=>{
+
+                NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
+
+            });
+
+        });
+
+        TEXT(ELEMENT,'','Guide',(ELEMENTEDS)=>{
 
             STYLED(ELEMENTEDS,'text-align','right');
             STYLED(ELEMENTEDS,'margin-right','5%');

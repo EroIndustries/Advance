@@ -1,6 +1,7 @@
 import { APPICON } from "../Icons/White/AppIcon/AppIcon.js";
 import { BACKICON } from "../Icons/White/BackIcon/BackIcon.js";
 import { BAGICON } from "../Icons/White/BagIcon/BagIcon.js";
+import { CAUTIONICON } from "../Icons/White/CautionIcon/CautionIcon.js";
 import { COMMENTICON } from "../Icons/White/CommentIcon/CommentIcon.js";
 import { CREATEDONICON } from "../Icons/White/CreatedOnIcon/CreatedOnIcon.js";
 import { DOWNLOADICON } from "../Icons/White/DownloadIcon/DownloadIcon.js";
@@ -12,6 +13,7 @@ import { LIBRARYICON } from "../Icons/White/LibraryIcon/LibraryIcon.js";
 import { LISTICON } from "../Icons/White/ListIcon/ListIcon.js";
 import { MOBILEDEVELOPMENTICON } from "../Icons/White/MobileDevelopmentIcon/MobileDevelopmentIcon.js";
 import { MOVIESICON } from "../Icons/White/MovieIcon/MovieIcon.js";
+import { PARENTALGUIDANCEICON } from "../Icons/White/ParentalGuidance/ParentalGuidance.js";
 import { PHONEICON } from "../Icons/White/PhoneIcon/PhoneIcon.js";
 import { PRIVACYPOLICYICON } from "../Icons/White/PrivacyPolicyIcon/PrivacyPolicyIcon.js";
 import { SECRETCODEICON } from "../Icons/White/SecretIcon/SecretIcon.js";
@@ -48,10 +50,12 @@ const WHITEPRIVACYPOLICYICON='${PRIVACYPOLICYICON}';
 const WHITEBAGICON='${BAGICON}';
 const WHITESECRETCODEICON='${SECRETCODEICON}';
 const WHITECREATEDONICON='${CREATEDONICON}';
+const WHITECAUTIONICON='${CAUTIONICON}';
+const WHITEPARENTALGUIDANCEICON='${PARENTALGUIDANCEICON}';
 `;
 localStorage.setItem("WHITEICONS",DATA);
 };
 export{WHITEICONSROUTES};
 `
-const WHITECREATEDONICON='${CREATEDONICON}';
+const WHITEPARENTALGUIDANCEICON='${PARENTALGUIDANCEICON}';
 `
