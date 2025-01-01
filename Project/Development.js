@@ -278,8 +278,6 @@ const APPPAGE=()=>{
 
     DEJSON(sessionStorage.getItem('AppDetails'),(Element)=>{
 
-        console.log(Element);
-
         CLEAR("");
 
         FULLVIEW('','',(ELEMENT)=>{
@@ -463,7 +461,7 @@ const APPPAGE=()=>{
 
                 CLICKED(ELEMENTED,()=>{
                 
-                    NAVIGATOR('Yes',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
+                    NAVIGATOR('',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
 
                 });
 
