@@ -2,12 +2,7 @@ const ANDROIDHOMEPAGE=()=>{
 
     CHECKER(!localStorage.getItem('LikedApps'),()=>{
 
-        JSONADDER([],['9e24b827-9556-4f8f-baf9-13690c819556'],(data)=>{
-
-            STORE('local','LikedApps',data);
-
-        });
-       
+        STORE('local','LikedApps','');
     });
 
     CLEAR("");
@@ -58,7 +53,7 @@ const ANDROIDAPPPAGE=()=>{
 
     CLEAR("");
 
-    FULLVIEW('','transparent',(ELEMENT)=>{
+    FULLVIEW('','',(ELEMENT)=>{
 
         STYLED(ELEMENT,'top','50px');
 
@@ -94,7 +89,7 @@ const ANDROIDGAMEPAGE=()=>{
 
     CLEAR("");
 
-    FULLVIEW('','transparent',(ELEMENT)=>{
+    FULLVIEW('','',(ELEMENT)=>{
 
         STYLED(ELEMENT,'top','50px');
 
@@ -130,7 +125,7 @@ const ANDROIDUSERPAGE=()=>{
 
     CLEAR("");
 
-    FULLVIEW('','transparent',(ELEMENT)=>{
+    FULLVIEW('','',(ELEMENT)=>{
 
         STYLED(ELEMENT,'top','50px');
 
@@ -157,8 +152,6 @@ const ANDROIDUSERPAGE=()=>{
 
                 BUTTON(ELEMENTED,'Sign In','','green',(ELEMENTS)=>{
 
-                    NAVIGATOR('Yes',SIGNACCOUNTPAGE,'ANDROIDUSERPAGE');
-        
                 },(ELEMENTS)=>{
                     STYLED(ELEMENTS,'width','30%');
                     STYLED(ELEMENTS,'position','absolute');
@@ -283,13 +276,11 @@ const ANDROIDUSERPAGE=()=>{
 
 const APPPAGE=()=>{
 
-    DELETESTORE('','Paged');
-
     DEJSON(sessionStorage.getItem('AppDetails'),(Element)=>{
 
         CLEAR("");
 
-        FULLVIEW('','transparent',(ELEMENT)=>{
+        FULLVIEW('','',(ELEMENT)=>{
 
             STYLED(ELEMENT,'top','50px');
 
@@ -310,7 +301,6 @@ const APPPAGE=()=>{
                 STYLED(ELEMENTED,'left','auto');
                 STYLED(ELEMENTED,'width','50%');
                 STYLED(ELEMENTED,'height','50%');
-                STYLED(ELEMENTED,'background','transparent');
 
                 
                 BUTTON(ELEMENTED,' ','','transparent',()=>{
@@ -391,7 +381,6 @@ const APPPAGE=()=>{
                     STYLED(ELEMENTS,'height','50px');
                     STYLED(ELEMENTS,'height','50px');
                     STYLED(ELEMENTS,'display','inline-flex');
-                    STYLED(ELEMENTS,'background','transparent');
 
                     DEJSON(localStorage.getItem('LikedApps'),(LikedData)=>{
 
@@ -421,38 +410,10 @@ const APPPAGE=()=>{
                     });
                     
                     ICON(ELEMENTS,WHITECOMMENTICON,(ELEMENTED)=>{
-
-                        CLICKED(ELEMENTED,()=>{
-
-                            CONDITION(localStorage.getItem('UserData'),()=>{
-
-                            },()=>{
-
-                                STORE('','Paged','On');
-
-                                NAVIGATOR('Yes',SIGNACCOUNTPAGE,'APPPAGE');
-
-                            });
-
-                        });
                         
                     });
 
                     ICON(ELEMENTS,WHITESHAREICON,(ELEMENTED)=>{
-
-                        CLICKED(ELEMENTED,()=>{
-
-                            CONDITION(localStorage.getItem('UserData'),()=>{
-
-                            },()=>{
-
-                                STORE('','Paged','On');
-
-                                NAVIGATOR('Yes',SIGNACCOUNTPAGE,'APPPAGE');
-
-                            });
-
-                        });
                         
                     });
 
@@ -517,62 +478,118 @@ const APPPAGE=()=>{
 
     });
 
-};
+};const AUTORUN=()=>{
 
-const SIGNACCOUNTPAGE=()=>{
+    APPCOLOR('black');
 
-    CLEAR("");
+    NAVIGATOR('',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
 
-    FULLVIEW('','transparent',(ELEMENT)=>{
+    if (navigator.onLine) {
 
-        STYLED(ELEMENT,'top','50px');
-
-        BREAK(ELEMENT);BREAK(ELEMENT);
-
-        TEXT(ELEMENT,'','Get Started Now to Access Your Account',(ELEMENTEDS)=>{
-
-            STYLED(ELEMENTEDS,'text-align','center');
-
+        GETDATA('https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?gid=4400644#gid=4400644','Store',(data)=>{
+        
+            const DATA={
+                "Name":"Store",
+                "data":data
+            };
+    
+            STOREINDEXED('Store','Store',DATA,(MyData)=>{
+    
+                if (MyData === false ) {
+    
+                    UPDATEINDEXED('Store','Store',DATA);
+    
+                };
+    
+                HIDER(500,()=>{
+    
+                    if (MyData === true) {
+    
+                        NAVIGATOR('',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
+        
+                        return;
+                        
+                    };
+    
+                });
+    
+            });
+    
         });
+        
+    };
 
-        INPUT(ELEMENT,'email','Enter Your Email','',()=>{
+};const HOMEAPPS=(ELEMENT)=>{
 
-        });
+    GETINDEXED('Store','Store',(data)=>{
 
-        BUTTON(ELEMENT,'Access Now','','green',()=>{
+        REDUX(data,(element)=>{
 
-        },(ELEMENTES)=>{
+            REDUX(element.data,(Element)=>{
 
-        });
+                VIEW(ELEMENT,(ELEMENTED)=>{
 
-    });
+                    STYLED(ELEMENTED,'width','48%');
+                    STYLED(ELEMENTED,'display','inline-table');
+                    STYLED(ELEMENTED,'margin','auto');
+                    STYLED(ELEMENTED,'margin-left','0.5%');
+                    STYLED(ELEMENTED,'margin-right','0.5%');
+                    STYLED(ELEMENTED,'margin-top','3%');
 
-    HEADER('','transparent',(ELEMENT)=>{
+                    ICON(ELEMENTED,Element.AppImage,(ELEMENTEDS)=>{
 
-        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+                        STYLED(ELEMENTEDS,'width','100%');
+                        STYLED(ELEMENTEDS,'height','80%');
+                        
+                    });
 
-            STYLED(ELEMENTED,'margin-left','1%');
+                    TEXT(ELEMENTED,'',Element.AppName,(ELEMENTEDS)=>{
 
-            CLICKED(ELEMENTED,()=>{
+                        STYLED(ELEMENTEDS,'text-align','right');
+                        STYLED(ELEMENTEDS,'margin-right','5%');
+                        STYLED(ELEMENTEDS,'margin-top','3%');
 
-                CONDITION(sessionStorage.getItem('Paged'),()=>{
+                    })
 
-                    NAVIGATOR('',APPPAGE,'APPPAGE');
+                    ICON(ELEMENTED,WHITESTARICON,(ELEMENTEDS)=>{
 
-                },()=>{
+                        STYLED(ELEMENTEDS,'position','absolute');
+                        STYLED(ELEMENTEDS,'bottom','9%');
+                        STYLED(ELEMENTEDS,'left','2%');
+                        
+                    });
 
-                    NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
+                    TEXT(ELEMENTED,'',Element.AppRatings,(ELEMENTEDS)=>{
+
+                        STYLED(ELEMENTEDS,'position','absolute');
+                        STYLED(ELEMENTEDS,'text-align','left');
+                        STYLED(ELEMENTEDS,'bottom','8%');
+                        STYLED(ELEMENTEDS,'left','20%');
+                        STYLED(ELEMENTEDS,'font-size','25px');
+                        STYLED(ELEMENTEDS,'color','forestgreen');
+                    })
+                   
+                    if (Element.ID === 'acb46b20f5afbeb05aa453e' ) {
+
+                        STYLED(ELEMENTED,'display','none');
+                        
+                    };
+
+                    CLICKED(ELEMENTED,()=>{
+
+                        JSONIFICATION(Element,(MyDaa)=>{
+
+                            STORE('','AppDetails',MyDaa);
+
+                            NAVIGATOR('Yes',APPPAGE,'ANDROIDHOMEPAGE');
+    
+                        });
+
+                    });
 
                 });
 
             });
-
-        });
-
-        TEXT(ELEMENT,'','Account Access',(ELEMENTEDS)=>{
-
-            STYLED(ELEMENTEDS,'text-align','right');
-            STYLED(ELEMENTEDS,'margin-right','5%');
 
         });
 
