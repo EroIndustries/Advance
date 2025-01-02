@@ -1263,7 +1263,8 @@ const ANDROIDPAYMENTPAGE=()=>{
     IFRAME('',sessionStorage.getItem("Link"),'transparent',(ELEMENT)=>{
 
         STYLED(ELEMENT,'top','50px');
-
+        STYLED(ELEMENT,'bottom','0px');
+        
     });
 
     HEADER('','transparent',(ELEMENT)=>{
