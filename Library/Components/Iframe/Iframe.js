@@ -1,6 +1,6 @@
 const IFRAME=(ELEMENT,SOURCE,COLOR,callback)=>{
     const MYBODY=document.querySelector('body');
-    const MYELEMENT=document.createElement("div");
+    const MYELEMENT=document.createElement("iframe");
     MYELEMENT.style.position='absolute';
     MYELEMENT.style.width='100%';
     MYELEMENT.style.height='auto';

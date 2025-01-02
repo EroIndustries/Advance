@@ -1156,6 +1156,8 @@ const ANDROIDDONATEPAGE=()=>{
 
     DELETESTORE("",'Amount');
 
+    DELETESTORE("",'Link');
+
     CLEAR("");
 
     FULLVIEW('','transparent',(ELEMENT)=>{
@@ -1194,7 +1196,9 @@ const ANDROIDDONATEPAGE=()=>{
 
                         TOKENIZATION(sessionStorage.getItem("UserEmail"), '','App Donation',sessionStorage.getItem('Amount'),'https://eroindustries.github.io/Advance/Start/Start.js', (data)=>{
 
-                           WEBSITE(data);
+                        STORE('','Link',data);
+
+                         NAVIGATOR("Yes",ANDROIDPAYMENTPAGE,'ANDROIDDONATEPAGE');
 
                         });
 
@@ -1246,4 +1250,38 @@ const ANDROIDDONATEPAGE=()=>{
 
     });
 
+};
+
+const ANDROIDPAYMENTPAGE=()=>{
+
+    CLEAR("");
+
+    IFRAME('',sessionStorage.getItem("Link"),'transparent',(ELEMENT)=>{
+
+        STYLED(ELEMENT,'top','50px');
+
+    });
+
+    HEADER('','transparent',(ELEMENT)=>{
+
+        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+
+            STYLED(ELEMENTED,'margin-left','1%');
+
+            CLICKED(ELEMENTED,()=>{
+               
+                NAVIGATOR('',ANDROIDDONATEPAGE,'ANDROIDDONATEPAGE');
+
+            });
+
+        });
+
+        TEXT(ELEMENT,'','Pay',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','right');
+            STYLED(ELEMENTEDS,'margin-right','5%');
+
+        });
+
+    });
 };
