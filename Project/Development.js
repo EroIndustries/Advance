@@ -12,7 +12,7 @@ const ANDROIDHOMEPAGE=()=>{
 
     CLEAR("");
 
-    FULLVIEW('','',(ELEMENT)=>{
+    FULLVIEW('','transparent',(ELEMENT)=>{
 
         HOMEAPPS(ELEMENT);
 
@@ -147,6 +147,13 @@ const ANDROIDUSERPAGE=()=>{
                 STYLED(ELEMENTEDS,'width','50%');
                 STYLED(ELEMENTEDS,'height','70%');
 
+                CLICKED(ELEMENTEDS,()=>{
+                    
+                    IMAGEPICKER(ELEMENTEDS,(data)=>{
+                        console.log(data)
+                    })
+                })
+
             });
 
             CONDITION(localStorage.getItem("UserData"),()=>{
@@ -206,6 +213,8 @@ const ANDROIDUSERPAGE=()=>{
         });
 
         BUTTON(ELEMENT,' ','','green',()=>{
+
+            NAVIGATOR('Yes',ANDROIDBUSINESSPAGE,'ANDROIDUSERPAGE');
 
         },(ELEMENTES)=>{
 
@@ -1083,4 +1092,158 @@ const ANDROIDTERMPAGE=()=>{
         });
 
     });
+};
+
+const ANDROIDBUSINESSPAGE=()=>{
+
+    CLEAR("");
+
+    FULLVIEW('','transparent',(ELEMENT)=>{
+
+        STYLED(ELEMENT,'top','50px');
+
+        BUTTON(ELEMENT,' ','','green',()=>{
+
+            NAVIGATOR('Yes',ANDROIDDONATEPAGE,'ANDROIDBUSINESSPAGE');
+
+        },(ELEMENTES)=>{
+
+            STYLED(ELEMENTES,'display','inline-flex');
+
+            TEXT(ELEMENTES,'','Donate',(ELEMENTEDS)=>{
+
+                STYLED(ELEMENTEDS,'text-align','left');
+                STYLED(ELEMENTEDS,'margin-left','1%');
+                STYLED(ELEMENTEDS,'color','#ffffff');
+
+            });
+
+            ICON(ELEMENTES,WHITESECRETCODEICON,(ELEMENTED)=>{
+                STYLED(ELEMENTED,'margin-right','5%');
+            });
+
+        });
+
+    });
+
+    HEADER('','transparent',(ELEMENT)=>{
+
+        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+
+            STYLED(ELEMENTED,'margin-left','1%');
+
+            CLICKED(ELEMENTED,()=>{
+               
+                NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
+
+            });
+
+        });
+
+        TEXT(ELEMENT,'','Business Tools',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','right');
+            STYLED(ELEMENTEDS,'margin-right','5%');
+
+        });
+
+    });
+};
+
+const ANDROIDDONATEPAGE=()=>{
+
+    DELETESTORE("",'UserEmail');
+
+    DELETESTORE("",'Amount');
+
+    CLEAR("");
+
+    FULLVIEW('','transparent',(ELEMENT)=>{
+
+        STYLED(ELEMENT,'top','50px');
+
+        BREAK(ELEMENT);BREAK(ELEMENT);
+
+        TEXT(ELEMENT,'','Support Us Today ',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','center');
+
+        });
+
+        INPUT(ELEMENT,'tel','Enter Your Amount In Dollars','',(ELE)=>{
+
+            STORE("",'Amount',ELE);
+
+        });
+
+        INPUT(ELEMENT,'email','Enter Your Email','',(ELE)=>{
+
+            STORE("",'UserEmail',ELE);
+
+        });
+
+        BUTTON(ELEMENT,'Access Now','','green',(ELEMENT)=>{
+
+            CONDITION(sessionStorage.getItem('UserEmail'),()=>{
+
+                CONDITION(sessionStorage.getItem('Amount'),()=>{
+
+                    CHECKER(navigator.onLine,()=>{
+
+                        DISPLAY(ELEMENT,'Please Wait');
+
+                        TOKENIZATION(sessionStorage.getItem("UserEmail"), '','App Donation',sessionStorage.getItem('Amount'),'https://eroindustries.github.io/Advance/Start/Start.js', (data)=>{
+
+                           WEBSITE(data);
+
+                        });
+
+                    });
+
+                },()=>{
+
+                    alert("Enter Your Amount");
+                })
+
+            },()=>{
+                alert("Enter Your Email")
+            })
+
+        },(ELEMENTES)=>{
+
+        });
+
+    });
+
+    HEADER('','transparent',(ELEMENT)=>{
+
+        ICON(ELEMENT,WHITEBACKICON,(ELEMENTED)=>{
+
+            STYLED(ELEMENTED,'margin-left','1%');
+
+            CLICKED(ELEMENTED,()=>{
+
+                CONDITION(sessionStorage.getItem('Paged'),()=>{
+
+                    NAVIGATOR('',APPPAGE,'APPPAGE');
+
+                },()=>{
+
+                    NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
+
+                });
+
+            });
+
+        });
+
+        TEXT(ELEMENT,'','Account Access',(ELEMENTEDS)=>{
+
+            STYLED(ELEMENTEDS,'text-align','right');
+            STYLED(ELEMENTEDS,'margin-right','5%');
+
+        });
+
+    });
+
 };

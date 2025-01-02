@@ -3,6 +3,7 @@ import { FOOTER } from "../Components/Footer/Footer.js";
 import { FULLVIEW } from "../Components/FullView/FullView.js";
 import { HEADER } from "../Components/Header/Header.js";
 import { ICON } from "../Components/Icon/Icon.js";
+import { IFRAME } from "../Components/Iframe/Iframe.js";
 import { IMAGE } from "../Components/Image/Image.js";
 import { INPUT } from "../Components/Input/Input.js";
 import { ROUNDFOOTER } from "../Components/RoundFooter/RoundFooter.js";
@@ -21,10 +22,11 @@ const FOOTER=${FOOTER};
 const ROUNDFOOTER=${ROUNDFOOTER};
 const HEADER=${HEADER};
 const TEXT=${TEXT};
+const IFRAME=${IFRAME};
 `;
 localStorage.setItem("COMPONENTS",DATA);
 };
 export{COMPONENTSROUTERS};
 `
-const TEXT=${TEXT};
+const IFRAME=${IFRAME};
 `

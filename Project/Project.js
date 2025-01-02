@@ -1,6 +1,6 @@
 const AUTORUN=()=>{
 
-    APPCOLOR('black');
+    APPCOLOR('#333333');
 
     NAVIGATOR('',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
 
