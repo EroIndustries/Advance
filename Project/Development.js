@@ -1196,9 +1196,13 @@ const ANDROIDDONATEPAGE=()=>{
 
                         TOKENIZATION(sessionStorage.getItem("UserEmail"), '','App Donation',sessionStorage.getItem('Amount'),'https://eroindustries.github.io/Advance/Start/Start.js', (data)=>{
 
-                        STORE('','Link',data);
+                            HIDER(500,()=>{
 
-                         NAVIGATOR("Yes",ANDROIDPAYMENTPAGE,'ANDROIDDONATEPAGE');
+                                STORE('','Link',data);
+
+                                NAVIGATOR("Yes",ANDROIDPAYMENTPAGE,'ANDROIDDONATEPAGE');
+       
+                            });
 
                         });
 
