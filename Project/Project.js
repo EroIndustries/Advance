@@ -4,17 +4,65 @@ const AUTORUN=()=>{
 
         DATENOW((Time)=>{
 
-            const HEADER=['TimeOpened','Device','Active'];
+            CHECKER(!localStorage.getItem('Activity'),()=>{
 
-            const DATA=[Time,device,'On'];
+                JSONADDER([],[new Date()],(data)=>{
+        
+                    STORE('local','Activity',data);
+        
+                });
+               
+            });
+
+            CHECKER(localStorage.getItem('Activity'),()=>{
+
+                JSONADDER(localStorage.getItem('Activity'),[new Date()],(data)=>{
+        
+                    STORE('local','Activity',data);
+        
+                });
+               
+            });
+
+            const HEADER=['TimeOpened','Device','Active','Activity','State'];
+
+            const DATA=[Time,device,'On',localStorage.getItem('Activity'),'Verified'];
 
             const LINK='https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?pli=1&gid=1692936594#gid=1692936594';
 
             CHECKER(navigator.onLine,()=>{
 
-                INSERTDATA(LINK,'StoreAnnoymousDevice',HEADER,DATA,()=>{
+                CONDITION(localStorage.getItem("TimeOpened"),()=>{
 
-                    console.log("Device Updated");
+                    GETDATA(LINK,'StoreAnnoymousDevice',(Mydata)=>{
+
+                        REDUX(Mydata,(Element)=>{
+    
+                            CHECKER(Element.TimeOpened.toString() === localStorage.getItem('TimeOpened'),()=>{
+
+                                UPDATEDATA(LINK,'StoreAnnoymousDevice',Element.ID,DATA,(data)=>{
+
+                                    console.log(data);
+
+                                });
+
+                            });
+                            
+                        });
+    
+                    });
+
+                },()=>{
+
+                    INSERTDATA(LINK,'StoreAnnoymousDevice',HEADER,DATA,(data)=>{
+
+                        CHECKER(data.error === false,()=>{
+    
+                            STORE("local",'TimeOpened',Time);
+    
+                        });
+    
+                    });
 
                 });
 
