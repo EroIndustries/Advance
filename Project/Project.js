@@ -24,9 +24,19 @@ const AUTORUN=()=>{
                
             });
 
+            CHECKER(localStorage.getItem("UserData"),()=>{
+
+                DEJSON(localStorage.getItem("UserData"),(datata)=>{
+
+                    STORE('','UserData',datata.UserEmail)
+
+                });
+
+            });
+
             const HEADER=['TimeOpened','Device','Active','Activity','State'];
 
-            const DATA=[Time,device,'On',localStorage.getItem('Activity'),'Verified'];
+            const DATA=[Time,device,'On',localStorage.getItem('Activity'),sessionStorage.getItem('UserData')||'Verified'];
 
             const LINK='https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?pli=1&gid=1692936594#gid=1692936594';
 
