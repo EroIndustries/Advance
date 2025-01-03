@@ -1,3 +1,4 @@
+import { AGREEMENT } from "../Icons/White/AgreementIcon/Agreement.js";
 import { APPICON } from "../Icons/White/AppIcon/AppIcon.js";
 import { BACKICON } from "../Icons/White/BackIcon/BackIcon.js";
 import { BAGICON } from "../Icons/White/BagIcon/BagIcon.js";
@@ -8,6 +9,7 @@ import { DOWNLOADICON } from "../Icons/White/DownloadIcon/DownloadIcon.js";
 import { GAMEICON } from "../Icons/White/GameIcon/GameIcon.js";
 import { GROUPICON } from "../Icons/White/GroupIcon/GroupIcon.js";
 import { HEARTICON } from "../Icons/White/HeartIcon/HeartIcon.js";
+import { HELPERICON } from "../Icons/White/HelperIcon/HelperIcon.js";
 import { HELPICON } from "../Icons/White/HelpIcon/HelpIcon.js";
 import { LIBRARYICON } from "../Icons/White/LibraryIcon/LibraryIcon.js";
 import { LISTICON } from "../Icons/White/ListIcon/ListIcon.js";
@@ -52,10 +54,12 @@ const WHITESECRETCODEICON='${SECRETCODEICON}';
 const WHITECREATEDONICON='${CREATEDONICON}';
 const WHITECAUTIONICON='${CAUTIONICON}';
 const WHITEPARENTALGUIDANCEICON='${PARENTALGUIDANCEICON}';
+const WHITEAGREEMENTICON='${AGREEMENT}';
+const WHITEHELPERICON='${HELPERICON}';
 `;
 localStorage.setItem("WHITEICONS",DATA);
 };
 export{WHITEICONSROUTES};
 `
-const WHITEPARENTALGUIDANCEICON='${PARENTALGUIDANCEICON}';
+const WHITEHELPERICON='${HELPERICON}';
 `

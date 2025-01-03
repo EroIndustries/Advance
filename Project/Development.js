@@ -141,6 +141,7 @@ const ANDROIDUSERPAGE=()=>{
         VIEW(ELEMENT,(ELEMENTED)=>{
 
             STYLED(ELEMENTED,'display','inline-flex');
+            STYLED(ELEMENTED,'background','transparent');
 
             ICON(ELEMENTED,WHITEUSERHOLDERICON,(ELEMENTEDS)=>{
 
@@ -188,26 +189,6 @@ const ANDROIDUSERPAGE=()=>{
                     STYLED(ELEMENTS,'border-radius','10px');
                 });
                 
-            });
-
-        });
-
-        BUTTON(ELEMENT,' ','','green',()=>{
-
-        },(ELEMENTES)=>{
-
-            STYLED(ELEMENTES,'display','inline-flex');
-
-            TEXT(ELEMENTES,'','Community',(ELEMENTEDS)=>{
-
-                STYLED(ELEMENTEDS,'text-align','left');
-                STYLED(ELEMENTEDS,'margin-left','1%');
-                STYLED(ELEMENTEDS,'color','#ffffff');
-
-            });
-
-            ICON(ELEMENTES,WHITEGROUPICON,(ELEMENTED)=>{
-                STYLED(ELEMENTED,'margin-right','5%');
             });
 
         });
@@ -618,41 +599,45 @@ const SIGNACCOUNTPAGE=()=>{
 
                             },()=>{
 
-                                DATENOW((Now)=>{
+                                DEVICE((de)=>{
 
-                                    const DATA=[sessionStorage.getItem('UserEmail'),Now,'Active']
-                                    const HEADERS=['UserEmail','Device','CreatedOn','Status'];
+                                    DATENOW((Now)=>{
+
+                                        const DATA=[sessionStorage.getItem('UserEmail'),de,Now,'Active']
+                                        const HEADERS=['UserEmail','Device','CreatedOn','Status'];
+        
+                                        INSERTDATA(LINK,'StoreUsers',HEADERS,DATA,()=>{
     
-                                    INSERTDATA(LINK,'StoreUsers',HEADERS,DATA,()=>{
-
-                                        GETDATA(LINK,'StoreUsers',(MyDatata)=>{
-
-                                            FINDER(MyDatata,'UserEmail',sessionStorage.getItem('UserEmail'),(Mydata)=>{
-
-                                                CONDITION(Mydata ,()=>{
-
-                                                    JSONIFICATION(Mydata,(SavedUser)=>{
-
-                                                        STORE('local','UserData',SavedUser);
-                    
-                                                        NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
-                                                        
+                                            GETDATA(LINK,'StoreUsers',(MyDatata)=>{
+    
+                                                FINDER(MyDatata,'UserEmail',sessionStorage.getItem('UserEmail'),(Mydata)=>{
+    
+                                                    CONDITION(Mydata ,()=>{
+    
+                                                        JSONIFICATION(Mydata,(SavedUser)=>{
+    
+                                                            STORE('local','UserData',SavedUser);
+                        
+                                                            NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
+                                                            
+                                                        });
+    
+                                                    },()=>{
+    
+                                                        alert("Failed to Link Device to Your Account");
+    
                                                     });
-
-                                                },()=>{
-
-                                                    alert("Failed to Link Device to Your Account");
-
+    
                                                 });
-
+                                    
                                             });
-                                
+    
+                                            NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
+        
                                         });
-
-                                        NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
-    
+        
                                     });
-    
+
                                 });
 
                             });
@@ -937,7 +922,7 @@ const ANDROIDHELPPAGE=()=>{
 
             });
 
-            ICON(ELEMENTES,WHITEPARENTALGUIDANCEICON,(ELEMENTED)=>{
+            ICON(ELEMENTES,WHITEHELPERICON,(ELEMENTED)=>{
                 STYLED(ELEMENTED,'margin-right','5%');
             });
 
@@ -959,7 +944,7 @@ const ANDROIDHELPPAGE=()=>{
 
             });
 
-            ICON(ELEMENTES,WHITECAUTIONICON,(ELEMENTED)=>{
+            ICON(ELEMENTES,WHITEAGREEMENTICON,(ELEMENTED)=>{
                 STYLED(ELEMENTED,'margin-right','5%');
             });
 
@@ -1096,6 +1081,10 @@ const ANDROIDTERMPAGE=()=>{
 
 const ANDROIDBUSINESSPAGE=()=>{
 
+    HIDER(100,()=>{
+        STORE('','PreviousPage','ANDROIDUSERPAGE');
+    });
+
     CLEAR("");
 
     FULLVIEW('','transparent',(ELEMENT)=>{
@@ -1152,6 +1141,10 @@ const ANDROIDBUSINESSPAGE=()=>{
 
 const ANDROIDDONATEPAGE=()=>{
 
+    HIDER(100,()=>{
+        STORE('','PreviousPage','ANDROIDBUSINESSPAGE');
+    });
+
     DELETESTORE("",'UserEmail');
 
     DELETESTORE("",'Amount');
@@ -1184,7 +1177,7 @@ const ANDROIDDONATEPAGE=()=>{
 
         });
 
-        BUTTON(ELEMENT,'Access Now','','green',(ELEMENT)=>{
+        BUTTON(ELEMENT,'Support Now','','green',(ELEMENT)=>{
 
             CONDITION(sessionStorage.getItem('UserEmail'),()=>{
 
@@ -1231,15 +1224,7 @@ const ANDROIDDONATEPAGE=()=>{
 
             CLICKED(ELEMENTED,()=>{
 
-                CONDITION(sessionStorage.getItem('Paged'),()=>{
-
-                    NAVIGATOR('',APPPAGE,'APPPAGE');
-
-                },()=>{
-
-                    NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
-
-                });
+                NAVIGATOR('',ANDROIDBUSINESSPAGE,'ANDROIDBUSINESSPAGE');
 
             });
 

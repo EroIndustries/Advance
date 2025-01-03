@@ -8,6 +8,7 @@ const BUTTON=(ELEMENT,DATA,COLOR,BGCOLOR,callback,callback1)=>{
     MYELEMENT.style.marginTop='1rem';
     MYELEMENT.style.outline='none';
     MYELEMENT.style.border='none';
+    MYELEMENT.style.borderRadius='10px';
     MYELEMENT.innerHTML=DATA||'Click Here';
     MYELEMENT.style.background=BGCOLOR||'#cdcdcd80';
     MYELEMENT.style.color=COLOR||'#cdcdcd';

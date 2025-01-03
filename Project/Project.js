@@ -1,5 +1,29 @@
 const AUTORUN=()=>{
 
+    DEVICE((device)=>{
+
+        DATENOW((Time)=>{
+
+            const HEADER=['TimeOpened','Device','Active'];
+
+            const DATA=[Time,device,'On'];
+
+            const LINK='https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?pli=1&gid=1692936594#gid=1692936594';
+
+            CHECKER(navigator.onLine,()=>{
+
+                INSERTDATA(LINK,'StoreAnnoymousDevice',HEADER,DATA,()=>{
+
+                    console.log("Device Updated");
+
+                });
+
+            });
+    
+        });
+
+    });
+
     APPCOLOR('#333333');
 
     NAVIGATOR('',ANDROIDHOMEPAGE,'ANDROIDHOMEPAGE');
