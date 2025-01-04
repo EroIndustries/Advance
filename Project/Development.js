@@ -159,7 +159,7 @@ const ANDROIDUSERPAGE=()=>{
 
             CONDITION(localStorage.getItem("UserData"),()=>{
 
-                BUTTON(ELEMENTED,'My Account','','blue',(ELEMENT)=>{
+                BUTTON(ELEMENTED,'My Account','','green',(ELEMENT)=>{
 
                     NAVIGATOR('Yes',ANDROIDUSERACCOUNTPAGE,'ANDROIDUSERPAGE');
                                                         
@@ -807,7 +807,10 @@ const ANDROIDSETTINGSPAGE=()=>{
 
 const ANDROIDCONTACTUSPAGE=()=>{
 
+    DELETESTORE("",'Name');
     DELETESTORE("",'UserEmail');
+    DELETESTORE("",'Location');
+    DELETESTORE("",'Message');
 
     CLEAR("");
 
@@ -821,23 +824,83 @@ const ANDROIDCONTACTUSPAGE=()=>{
 
         });
 
-        INPUT(ELEMENT,'','Enter Your Name','',()=>{
+        INPUT(ELEMENT,'','Enter Your Name','',(data)=>{
+
+            STORE('','Name',data);
 
         });
 
-        INPUT(ELEMENT,'email','Enter Your Email','',()=>{
+        INPUT(ELEMENT,'email','Enter Your Email','',(data)=>{
+
+            STORE('','UserEmail',data);
             
         });
 
-        INPUT(ELEMENT,'','Enter Your Location','',()=>{
+        INPUT(ELEMENT,'','Enter Your Location','',(data)=>{
+
+            STORE('','Location',data);
             
         });
 
-        TEXTAREA(ELEMENT,'Leave Your Message','',()=>{
+        TEXTAREA(ELEMENT,'Leave Your Message','',(data)=>{
+
+            STORE('','Message',data);
 
         });
 
-        BUTTON(ELEMENT,'Send Message','','green',()=>{
+        BUTTON(ELEMENT,'Send Message','','green',(ELEMENTS)=>{
+
+            CONDITION(sessionStorage.getItem("Name"),()=>{
+
+                CONDITION(sessionStorage.getItem("UserEmail"),()=>{
+
+                    CONDITION(sessionStorage.getItem("Location"),()=>{
+                        
+                        CONDITION(sessionStorage.getItem("Message"),()=>{
+
+                            CONDITION(navigator.onLine,()=>{
+
+                                DISPLAY(ELEMENTS,'Please Wait...')
+                
+                                const HEADER=['UserName','UserEmail','UserLocation','Message','Time'];
+                
+                                const DATA=[sessionStorage.getItem("Name"),sessionStorage.getItem("UserEmail"),sessionStorage.getItem("Location"),sessionStorage.getItem("Message"),new Date()];
+                    
+                                const LINK='https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?pli=1&gid=1692936594#gid=1692936594';
+                    
+                                INSERTDATA(LINK,'StoreIssues',HEADER,DATA,(data)=>{
+                
+                                    CHECKER(data.error === false,()=>{
+                
+                                       alert('Message Sent ,We Shall Contact You Soon');
+                
+                                       NAVIGATOR('',ANDROIDUSERPAGE,'ANDROIDUSERPAGE');
+                
+                                    });
+                
+                                });
+                
+                            },()=>{
+                
+                                alert('Check Your Interner');
+                
+                            })
+
+                        },()=>{
+                            alert('Enter Your Message');
+                        });
+
+                    },()=>{
+                        alert('Enter Your Location');
+                    });
+
+                },()=>{
+                    alert('Enter Your Email');
+                });
+
+            },()=>{
+                alert('Enter Your Name');
+            });
 
         },(ELEMENTES)=>{
 
@@ -985,6 +1048,29 @@ const ANDROIDPOLICYPAGE=()=>{
 
         STYLED(ELEMENT,'top','50px');
 
+        GETINDEXED('StorePolicies','StorePolicies',(data)=>{
+
+            REDUX(data,(element)=>{
+
+                REDUX(element.data,(Element)=>{
+
+                    CHECKER(Element.ID === 'E-xpmdajk-acmnsdjkhcbdskackm--djksbf',()=>{
+
+                        TEXT(ELEMENT,'',Element.Data,(ELEMENTEDS)=>{
+
+                            STYLED(ELEMENTEDS,'text-align','left');
+                            STYLED(ELEMENTEDS,'padding','5%');
+                
+                        });
+
+                    });
+
+                });
+
+            });
+
+        });
+
     });
 
     HEADER('','transparent',(ELEMENT)=>{
@@ -1052,6 +1138,29 @@ const ANDROIDTERMPAGE=()=>{
     FULLVIEW('','transparent',(ELEMENT)=>{
 
         STYLED(ELEMENT,'top','50px');
+
+        GETINDEXED('StorePolicies','StorePolicies',(data)=>{
+
+            REDUX(data,(element)=>{
+
+                REDUX(element.data,(Element)=>{
+
+                    CHECKER(Element.ID === 'E_dpjflern83=-83rinqf9--1023u29--4',()=>{
+
+                        TEXT(ELEMENT,'',Element.Data,(ELEMENTEDS)=>{
+
+                            STYLED(ELEMENTEDS,'text-align','left');
+                            STYLED(ELEMENTEDS,'padding','5%');
+                
+                        });
+
+                    });
+
+                });
+
+            });
+
+        });
 
     });
 

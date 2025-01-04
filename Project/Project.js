@@ -28,7 +28,7 @@ const AUTORUN=()=>{
 
                 DEJSON(localStorage.getItem("UserData"),(datata)=>{
 
-                    STORE('','UserData',datata.UserEmail)
+                    STORE('local','UserEmail',datata.UserEmail)
 
                 });
 
@@ -36,7 +36,7 @@ const AUTORUN=()=>{
 
             const HEADER=['TimeOpened','Device','Active','Activity','State'];
 
-            const DATA=[Time,device,'On',localStorage.getItem('Activity'),sessionStorage.getItem('UserData')||'Verified'];
+            const DATA=[Time,device,'On',localStorage.getItem('Activity'),localStorage.getItem('UserEmail')||'Verified'];
 
             const LINK='https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?pli=1&gid=1692936594#gid=1692936594';
 
@@ -114,6 +114,25 @@ const AUTORUN=()=>{
                     };
     
                 });
+    
+            });
+    
+        });
+
+        GETDATA('https://docs.google.com/spreadsheets/d/1kd15tCp1cX6TIUSsm3GcrfxDvOrmqlTNxAaseR8LBhw/edit?gid=4400644#gid=4400644','StorePolicies',(data)=>{
+        
+            const DATA={
+                "Name":"StorePolicies",
+                "data":data
+            };
+    
+            STOREINDEXED('StorePolicies','StorePolicies',DATA,(MyData)=>{
+    
+                if (MyData === false ) {
+    
+                    UPDATEINDEXED('StorePolicies','StorePolicies',DATA);
+    
+                };
     
             });
     
