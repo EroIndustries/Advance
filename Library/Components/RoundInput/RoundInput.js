@@ -5,13 +5,14 @@ const ROUNDINPUT=(ELEMENT,TYPE,HOLDER,COLOR,callback)=>{
     MYELEMENT.style.height='32px';
     MYELEMENT.style.position='relative';
     MYELEMENT.style.left='1%';
+    MYELEMENT.style.padding='1%';
     MYELEMENT.style.marginTop='1rem';
     MYELEMENT.style.outline='none';
     MYELEMENT.type=TYPE||'text';
     MYELEMENT.placeholder=HOLDER||'Your Text';
     MYELEMENT.style.background='transparent';
-    MYELEMENT.style.border='none';
-    MYELEMENT.style.borderBottom='1px solid #cdcdcd50';
+    MYELEMENT.style.border='1px solid #cdcdcd50';
+    MYELEMENT.style.borderRadius='10px';
     MYELEMENT.style.color=COLOR||'#cdcdcd';
     MYELEMENT.autocomplete = 'off';
     MYELEMENT.maxLength = 49000;

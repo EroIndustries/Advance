@@ -1,6 +1,6 @@
 const AUTORUN=()=>{
 
-    APPCOLOR("#8979b3");
+    APPCOLOR("#000000");
 
     CONDITION(localStorage.getItem('UserData'),()=>{
 

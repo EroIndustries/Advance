@@ -2,16 +2,24 @@ const ANDROIDLOGINPAGE=()=>{
 
     CLEAR('');
 
-    COLORROUNDINPUT('','email','UserEmail','',(data)=>{
+    ROUNDINPUT('','email','UserEmail','',(data)=>{
 
     });
 
-    COLORROUNDINPUT('','email','UserEmail','',(data)=>{
+    ROUNDINPUT('','email','UserEmail','',(data)=>{
 
     });
 
     BUTTON('','Sign In','','forestgreen',()=>{
 
+    },()=>{
+        
+    });
+
+    BUTTON('','Sign In','','blue',()=>{
+
+    },()=>{
+        
     });
 
 }
