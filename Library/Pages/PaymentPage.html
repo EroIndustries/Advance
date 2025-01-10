@@ -14,6 +14,7 @@
         text-align: center;
         color: white;
         font-size: 18px;
+        font-family: sans-serif;
     }
 
     body{
@@ -25,7 +26,7 @@
 
     .ImageSpace{
         margin: auto;
-        width: 98%;
+        width: 80%;
         border-radius: 10px;
         height: auto;
     }
@@ -104,6 +105,8 @@
         
         <p>Crochet Doughnut KeyChain</p>
 
+        <p>Color : Cream And GolderBrown</p>
+
         <p class="Price">
 
             Item: $9.84
@@ -114,10 +117,6 @@
             <br><br>
         </p>
         
-        <p>Color : Cream And GolderBrown</p>
-
-        <br>
-    
         <button class="BuyNow" onclick="BuyNow()" >Buy Now</button>
           
         <br><br>
@@ -128,7 +127,7 @@
 
 <script>
 
-    const PaymentDiv=document.querySelector(".PaymentDiv");
+const PaymentDiv=document.querySelector(".PaymentDiv");
 
 const TOKENIZATION = (EMAIL, NAME, DETAILS, AMOUNT, LINK, callback) => {
     const TokenApi = "https://script.google.com/macros/s/AKfycbxkGgol95WSc9YQIqXrQYRFbYQfaN3KM_jG83vjwWRcqZJl1CKVh2gQ3FAuyeX7Jzre3Q/exec";
@@ -152,8 +151,6 @@ const TOKENIZATION = (EMAIL, NAME, DETAILS, AMOUNT, LINK, callback) => {
         })
         .catch((error) => console.log(error));
 };
-
-
 
 BuyNow=()=>{
 
